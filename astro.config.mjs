@@ -63,7 +63,7 @@ export default defineConfig({
       ],
       head: [
         { tag: 'meta', attrs: { name: 'theme-color', content: '#2563eb' } },
-        { tag: 'link', attrs: { rel: 'icon', type: 'image/svg+xml', href: '/ApuntesRedes/favicon.svg' } },
+        { tag: 'link', attrs: { rel: 'icon', type: 'image/svg+xml', href: '/PAR/favicon.svg' } },
       ],
       sidebar: [
         {
