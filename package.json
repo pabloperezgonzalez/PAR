@@ -7,18 +7,12 @@
     "dev": "astro dev",
     "diagrams": "node scripts/generate-diagrams.mjs",
     "build": "npm run diagrams && astro build",
-    "preview": "astro preview",
-    "pdf": "npm run build && npx starlight-to-pdf https://pabloperezgonzalez.github.io/PAR/ -p public/pdf -f ApuntesPAR --footer scripts/pdf-footer.html --header scripts/pdf-header.html --preceding-html scripts/pdf-cover.html --print-bg",
-    "pdf:local": "npm run build && npx starlight-to-pdf http://localhost:4321/PAR -p public/pdf -f ApuntesPAR --footer scripts/pdf-footer.html --header scripts/pdf-header.html --preceding-html scripts/pdf-cover.html --print-bg",
-    "epub": "pwsh -NoProfile -File scripts/generate-epub.ps1",
-    "export": "npm run pdf && npm run epub"
+    "preview": "astro preview"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.41.0",
     "@fontsource/geist-sans": "^5.2.5",
     "astro": "^7.0.2",
-    "puppeteer": "^25.2.1",
-    "puppeteer-autoscroll-down": "^2.0.1",
     "sharp": "^0.34.5"
   },
   "devDependencies": {
