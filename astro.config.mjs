@@ -48,7 +48,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Apuntes PAR',
-      description: 'Planificación y Administración de Redes — 12 unidades didácticas. CC BY-SA 4.0 — Sergi Garcia Barea',
+      description: 'Planificación y Administración de Redes — 7 Unidades de Programación — Pablo Pérez González',
       customCss: [
         './src/styles/custom.css',
         '@fontsource/geist-sans',
@@ -58,9 +58,6 @@ export default defineConfig({
       },
       defaultLocale: 'root',
       tableOfContents: false,
-      social: [
-        { icon: 'github', label: 'GitHub', href: 'https://pabloperezgonzalez.github.io/PAR' },
-      ],
       head: [
         { tag: 'meta', attrs: { name: 'theme-color', content: '#2563eb' } },
         { tag: 'link', attrs: { rel: 'icon', type: 'image/svg+xml', href: '/PAR/favicon.svg' } },

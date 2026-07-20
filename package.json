@@ -8,8 +8,8 @@
     "diagrams": "node scripts/generate-diagrams.mjs",
     "build": "npm run diagrams && astro build",
     "preview": "astro preview",
-    "pdf": "npm run build && npx starlight-to-pdf https://sergarb1.github.io/ApuntesRedes -p public/pdf -f ApuntesPAR --footer scripts/pdf-footer.html --header scripts/pdf-header.html --preceding-html scripts/pdf-cover.html --print-bg",
-    "pdf:local": "npm run build && npx starlight-to-pdf http://localhost:4321/ApuntesRedes -p public/pdf -f ApuntesPAR --footer scripts/pdf-footer.html --header scripts/pdf-header.html --preceding-html scripts/pdf-cover.html --print-bg",
+    "pdf": "npm run build && npx starlight-to-pdf https://pabloperezgonzalez.github.io/PAR/ -p public/pdf -f ApuntesPAR --footer scripts/pdf-footer.html --header scripts/pdf-header.html --preceding-html scripts/pdf-cover.html --print-bg",
+    "pdf:local": "npm run build && npx starlight-to-pdf http://localhost:4321/PAR -p public/pdf -f ApuntesPAR --footer scripts/pdf-footer.html --header scripts/pdf-header.html --preceding-html scripts/pdf-cover.html --print-bg",
     "epub": "pwsh -NoProfile -File scripts/generate-epub.ps1",
     "export": "npm run pdf && npm run epub"
   },
