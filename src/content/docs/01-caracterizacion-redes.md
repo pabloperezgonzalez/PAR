@@ -3,18 +3,19 @@ title: UP1 — Caracterización de redes
 ---
 
 ## 📝 Criterios de evaluación 
-### RA1. Reconoce la estructura de las redes de datos identificando sus elementos y principios de funcionamiento.
 
-| Criterio de evaluación | Ponderación |
+**RA1. Reconoce la estructura de las redes de datos identificando sus elementos y principios de funcionamiento.**
+
+| Criterio de evaluación | Tipo | Ponderación |
 |-----------|-----|
-| a) Se han identificado los factores que impulsan la continua expansión y evolución de las redes de datos. |  % | 
-| b) Se han diferenciado los distintos medios de transmisión utilizados en las redes. |  % | 
-| c) Se han reconocido los distintos tipos de red y sus topologías. |  % | 
-| d) Se han descrito las arquitecturas de red y los niveles que las componen. |  % | 
-| e) Se ha descrito el concepto de protocolo de comunicación. |  % | 
-| f) Se ha descrito el funcionamiento de las pilas de protocolos en las distintas arquitecturas de red. |  % | 
-| g) Se han presentado y descrito los elementos funcionales, físicos y lógicos, de las redes de datos. |  % | 
-| h) Se han diferenciado los dispositivos de interconexión de redes atendiendo al nivel funcional en el que se encuadran. |  % | 
+| a) Se han identificado los factores que impulsan la continua expansión y evolución de las redes de datos. | Teórico |  % | 
+| b) Se han diferenciado los distintos medios de transmisión utilizados en las redes. | Teórico |  % | 
+| c) Se han reconocido los distintos tipos de red y sus topologías. | Teórico |  % | 
+| d) Se han descrito las arquitecturas de red y los niveles que las componen. | Teórico |  % | 
+| e) Se ha descrito el concepto de protocolo de comunicación. | Teórico |  % | 
+| f) Se ha descrito el funcionamiento de las pilas de protocolos en las distintas arquitecturas de red. | Teórico |  % | 
+| g) Se han presentado y descrito los elementos funcionales, físicos y lógicos, de las redes de datos. | Teórico |  % | 
+| h) Se han diferenciado los dispositivos de interconexión de redes atendiendo al nivel funcional en el que se encuadran. | Teórico |  % | 
 
 ---
 
