@@ -1,9 +1,9 @@
 # PAR - Planificación y Administración de Redes
-## Módul de 1º de ASIR - Administración de Sistemas Informáticos en Red
+## Módulo de 1º de ASIR - Administración de Sistemas Informáticos en Red
 
 Visita página principal de contenidos en: https://pabloperezgonzalez.github.io/PAR/
 
-Usa ![traductor](docs/imgs/icono-trad-google.png) para visualizar en otras lenguas.
+Usa ![traductor](public\icons/icono-trad-google.png) para visualizar en otras lenguas.
 
 Código Módulo: 0370 - Planificación y Administración de Redes.
 
