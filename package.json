@@ -2,7 +2,7 @@
   "name": "apuntes-par",
   "type": "module",
   "version": "1.0.0",
-  "description": "Apuntes de Planificación y Administración de Redes — CC BY-SA 4.0",
+  "description": "Apuntes de Planificación y Administración de Redes",
   "scripts": {
     "dev": "astro dev",
     "diagrams": "node scripts/generate-diagrams.mjs",
