@@ -1,19 +1,10 @@
 ﻿---
 title: UP1 — Caracterización de redes
-description: La red mágica que no funciona 😵‍💫
----
-
-> RA1. Reconoce la estructura de las redes de datos identificando sus elementos y principios de funcionamiento.
-
----
-
-Bienvenido. Esta unidad sienta las bases de todo lo que viene después.
-Vas a aprender qué es una red, para qué sirve, qué dispositivos la forman y cómo se organizan.
-No hace falta experiencia previa.
-
 ---
 
 ## 📝 Criterios de evaluación 
+
+**RA1. Reconoce la estructura de las redes de datos identificando sus elementos y principios de funcionamiento.**
 
 | Criterio de evaluación | Ponderación |
 |-----------|-----|
@@ -127,7 +118,7 @@ Por ejemplo, puedes tener una topología física en estrella (todo conectado a u
 Todos los dispositivos se conectan a un punto central (switch o hub).
 
 <figure class="diagram-figure">
-  <img src="/ApuntesRedes/diagrams/topologia-estrella.svg" alt="Topología en estrella con switch central y 4 PCs" class="diagram-img" loading="lazy" />
+  <img src="/PAR/diagrams/topologia-estrella.svg" alt="Topología en estrella con switch central y 4 PCs" class="diagram-img" loading="lazy" />
   <figcaption class="diagram-caption">Cada PC se conecta directamente al switch. Si un cable falla, solo ese PC pierde conexión.</figcaption>
 </figure>
 
@@ -139,7 +130,7 @@ Todos los dispositivos se conectan a un punto central (switch o hub).
 Todos los dispositivos comparten un mismo cable (coaxial, generalmente).
 
 <figure class="diagram-figure">
-  <img src="/ApuntesRedes/diagrams/topologia-bus.svg" alt="Topología en bus con cable coaxial compartido por 4 PCs" class="diagram-img" loading="lazy" />
+  <img src="/PAR/diagrams/topologia-bus.svg" alt="Topología en bus con cable coaxial compartido por 4 PCs" class="diagram-img" loading="lazy" />
   <figcaption class="diagram-caption">Todos los PCs comparten el mismo cable. Una rotura en cualquier punto deja toda la red fuera de servicio.</figcaption>
 </figure>
 
@@ -151,7 +142,7 @@ Todos los dispositivos comparten un mismo cable (coaxial, generalmente).
 Cada dispositivo se conecta al siguiente formando un círculo cerrado.
 
 <figure class="diagram-figure">
-  <img src="/ApuntesRedes/diagrams/topologia-anillo.svg" alt="Topología en anillo con 4 PCs conectados en círculo" class="diagram-img" loading="lazy" />
+  <img src="/PAR/diagrams/topologia-anillo.svg" alt="Topología en anillo con 4 PCs conectados en círculo" class="diagram-img" loading="lazy" />
   <figcaption class="diagram-caption">Cada PC se conecta a sus dos vecinos. Los datos viajan en una dirección (o dos en anillos duales).</figcaption>
 </figure>
 
@@ -163,7 +154,7 @@ Cada dispositivo se conecta al siguiente formando un círculo cerrado.
 Cada dispositivo se conecta a todos los demás.
 
 <figure class="diagram-figure">
-  <img src="/ApuntesRedes/diagrams/topologia-malla.svg" alt="Topología en malla con 4 PCs conectados entre sí" class="diagram-img" loading="lazy" />
+  <img src="/PAR/diagrams/topologia-malla.svg" alt="Topología en malla con 4 PCs conectados entre sí" class="diagram-img" loading="lazy" />
   <figcaption class="diagram-caption">Cada PC tiene conexión directa con todos los demás. Para n dispositivos, necesitas n×(n-1)/2 cables.</figcaption>
 </figure>
 
@@ -182,7 +173,7 @@ Cada dispositivo se conecta a todos los demás.
 > 💡 **La topología más común hoy es estrella.** Todos los dispositivos se conectan a uno o varios switches. Simple, fiable y fácil de ampliar. Cuando tienes varios switches conectados entre sí, se dice que tienes una topología en **árbol** (varias estrellas conectadas).
 
 <figure class="diagram-figure">
-  <img src="/ApuntesRedes/diagrams/red-domestica.svg" alt="Red doméstica típica con módem, router WiFi, switch, PC, portátil, móvil e impresora" class="diagram-img" loading="lazy" />
+  <img src="/PAR/diagrams/red-domestica.svg" alt="Red doméstica típica con módem, router WiFi, switch, PC, portátil, móvil e impresora" class="diagram-img" loading="lazy" />
   <figcaption class="diagram-caption">Una red doméstica típica mezcla cableado (PC fijo) e inalámbrico (portátil, móvil). El router hace de gateway y punto de acceso a la vez.</figcaption>
 </figure>
 
@@ -255,7 +246,7 @@ Dispositivo de capa 3 que conecta **redes diferentes**. Es el cerebro que decide
 - **Access Point:** Convierte la señal cableada en WiFi. Conecta dispositivos inalámbricos a la red LAN. No confundir con router: un AP no enruta, solo extiende la capa 2 al medio inalámbrico.
 
 <figure class="diagram-figure">
-  <img src="/ApuntesRedes/diagrams/dispositivos-osi.svg" alt="Dispositivos de red mapeados a sus capas OSI" class="diagram-img" loading="lazy" />
+  <img src="/PAR/diagrams/dispositivos-osi.svg" alt="Dispositivos de red mapeados a sus capas OSI" class="diagram-img" loading="lazy" />
   <figcaption class="diagram-caption">Cada dispositivo opera en una o varias capas del modelo OSI. A más capas se asciende, más inteligente es el dispositivo (y más caro).</figcaption>
 </figure>
 
@@ -301,7 +292,7 @@ Cuando envías un dato desde una aplicación, este viaja de arriba abajo en el m
 ```
 
 <figure class="diagram-figure">
-  <img src="/ApuntesRedes/diagrams/flujo-encapsulacion.svg" alt="Proceso de encapsulación TCP/IP desde aplicación hasta bits en el cable" class="diagram-img" loading="lazy" />
+  <img src="/PAR/diagrams/flujo-encapsulacion.svg" alt="Proceso de encapsulación TCP/IP desde aplicación hasta bits en el cable" class="diagram-img" loading="lazy" />
   <figcaption class="diagram-caption">Cada capa añade su cabecera al dato original. Al llegar al destino, el proceso se invierte: desencapsulación.</figcaption>
 </figure>
 
@@ -321,7 +312,7 @@ El modelo TCP/IP es el que realmente se usa en Internet. Es más práctico y tie
 > 💡 **Para este curso** nos centraremos en las capas 1 a 4 del modelo OSI. Las capas 5-7 son conceptualmente importantes pero en la práctica se engloban en una sola capa de **Aplicación** en TCP/IP.
 
 <figure class="diagram-figure">
-  <img src="/ApuntesRedes/diagrams/modelo-osi-capas.svg" alt="Las 7 capas del modelo OSI con ejemplos de protocolos" class="diagram-img" loading="lazy" />
+  <img src="/PAR/diagrams/modelo-osi-capas.svg" alt="Las 7 capas del modelo OSI con ejemplos de protocolos" class="diagram-img" loading="lazy" />
   <figcaption class="diagram-caption">Las 7 capas del modelo OSI. Los datos viajan de arriba abajo al enviar (encapsulación) y de abajo arriba al recibir (desencapsulación). Cada capa añade su propia cabecera.</figcaption>
 </figure>
 
@@ -537,7 +528,7 @@ Tu PC (192.168.1.10) → ping 8.8.8.8
 11. Tu PC recibe la respuesta y muestra: `Reply from 8.8.8.8: bytes=32 time=12ms TTL=117`
 
 <figure class="diagram-figure">
-  <img src="/ApuntesRedes/diagrams/flujo-arp-gateway.svg" alt="Flujo ARP: PC solicita la MAC del gateway para salir a Internet" class="diagram-img" loading="lazy" />
+  <img src="/PAR/diagrams/flujo-arp-gateway.svg" alt="Flujo ARP: PC solicita la MAC del gateway para salir a Internet" class="diagram-img" loading="lazy" />
   <figcaption class="diagram-caption">El PC necesita la MAC del gateway para enviar paquetes fuera de su red. ARP resuelve la IP 192.168.1.1 a su MAC correspondiente.</figcaption>
 </figure>
 
