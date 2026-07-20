@@ -1,5 +1,5 @@
 ﻿---
-title: UP1 — Caracterización de redes
+title: 🌐 UP1 — Caracterización de redes
 ---
 
 ## Introducción
