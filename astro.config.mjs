@@ -43,8 +43,8 @@ const boletinItems = (i) => [
 ];
 
 export default defineConfig({
-  site: 'https://sergarb1.github.io/ApuntesRedes',
-  base: '/ApuntesRedes',
+  site: 'https://pabloperezgonzalez.github.io/PAR',
+  base: '/PAR',
   integrations: [
     starlight({
       title: 'Apuntes PAR',
@@ -59,7 +59,7 @@ export default defineConfig({
       defaultLocale: 'root',
       tableOfContents: false,
       social: [
-        { icon: 'github', label: 'GitHub', href: 'https://github.com/sergarb1/ApuntesRedes' },
+        { icon: 'github', label: 'GitHub', href: 'https://pabloperezgonzalez.github.io/PAR' },
       ],
       head: [
         { tag: 'meta', attrs: { name: 'theme-color', content: '#2563eb' } },
