@@ -1,16 +1,30 @@
 ﻿---
-title: U01 — Fundamentos de redes
+title: UP1 — Caracterización de redes
 description: La red mágica que no funciona 😵‍💫
 ---
 
-
-<p><small>La red mágica que no funciona 😵‍💫</small></p>
-
-> 🗺️ **Ruta del paquete:** 🏠 **ORIGEN** → 📦 Encapsulado → 🔌 Cable → 🏷️ IP → 🌍 IPv6 → 🔀 Switch → 🏢 VLAN → 🧭 Router → 🗣️ OSPF → 🌐 NAT → 🩺 Diagnóstico → ☁️ Cloud
+> RA1. Reconoce la estructura de las redes de datos identificando sus elementos y principios de funcionamiento.
 
 ---
 
-Bienvenido. Esta unidad sienta las bases de todo lo que viene después. Vas a aprender qué es una red, para qué sirve, qué dispositivos la forman y cómo se organizan. No hace falta experiencia previa.
+Bienvenido. Esta unidad sienta las bases de todo lo que viene después.
+Vas a aprender qué es una red, para qué sirve, qué dispositivos la forman y cómo se organizan.
+No hace falta experiencia previa.
+
+---
+
+## 📝 Criterios de evaluación 
+
+| Criterio de evaluación | Ponderación |
+|-----------|-----|
+| a) Se han identificado los factores que impulsan la continua expansión y evolución de las redes de datos. |  % | 
+| b) Se han diferenciado los distintos medios de transmisión utilizados en las redes. |  % | 
+| c) Se han reconocido los distintos tipos de red y sus topologías. |  % | 
+| d) Se han descrito las arquitecturas de red y los niveles que las componen. |  % | 
+| e) Se ha descrito el concepto de protocolo de comunicación. |  % | 
+| f) Se ha descrito el funcionamiento de las pilas de protocolos en las distintas arquitecturas de red. |  % | 
+| g) Se han presentado y descrito los elementos funcionales, físicos y lógicos, de las redes de datos. |  % | 
+| h) Se han diferenciado los dispositivos de interconexión de redes atendiendo al nivel funcional en el que se encuadran. |  % | 
 
 ---
 
