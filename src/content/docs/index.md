@@ -1,13 +1,13 @@
 ---
 title: Planificación y Administración de Redes (PAR)
-description: Apuntes de Planificación y Administración de Redes (PAR) — 7 Unidades de Programación — Pablo Pérez
+description: Apuntes de Planificación y Administración de Redes (PAR) — 7 Unidades de Programación — Pablo Pérez González
 ---
 
 <div align="center">
-  <img src="/PAR/portada.png" alt="🌐 Planificación y Administración de Redes — Curso completo con teoría, prácticas y boletines. Diseño premium, modo oscuro y buscador integrado." style="max-width:100%;height:auto;border-radius:12px;margin:0 0 1.5rem;box-shadow:0 8px 40px rgba(0,0,0,0.15);">
+  <img src="/PAR/portada.png" alt="🌐 Planificación y Administración de Redes 🌐" style="max-width:100%;height:auto;border-radius:12px;margin:0 0 1.5rem;box-shadow:0 8px 40px rgba(0,0,0,0.15);">
 </div>
 
-## 📚 Unidades
+## 📚 Unidades de Programación
 
 <div class="unit-grid">
 
