@@ -47,7 +47,7 @@ export default defineConfig({
   base: '/PAR',
   integrations: [
     starlight({
-      title: 'Apuntes PAR',
+      title: 'PAR',
       description: 'Planificación y Administración de Redes — 7 Unidades de Programación — Pablo Pérez González',
       customCss: [
         './src/styles/custom.css',
