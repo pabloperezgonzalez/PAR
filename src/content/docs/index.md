@@ -26,5 +26,5 @@ Los criterios de calificación dependen del peso de cada Resultado de Aprendizaj
 - Cada criterio de evaluación se podrá evaluar mediante diferentes actividades de evaluación que se consideren adecuadas a ese criterio.
 - En caso de que el alumno/a **no supere un RA**, deberá presentarse a la convocatoria ordinaria o extraordinaria para poder recuperarlo.
 - La **calificación final** del módulo al finalizar el curso será la media ponderada de cada resultado de aprendizaje, debiendo obtener una calificación mínima del 50% y superando obligatoriamente todos los RA.
-- Para las diferentes ausencias, si coincide con un instrumento de evaluación correspondiente a un criterio, deberá siempre **justificarse con un justificante válido por autoridad*** para poder recuperarlo. En caso contrario, se evaluará con una nota de 0.
+- Para las diferentes ausencias, si coincide con un instrumento de evaluación correspondiente a un criterio, deberá siempre **justificarse con un justificante válido por autoridad** para poder recuperarlo. En caso contrario, se evaluará con una nota de 0.
 - Por otro lado, para tener derecho a la evaluación continua, el alumno/a **no tendrá más de un 15% de faltas de asistencia injustificadas**. Si el alumno/a pierde la evaluación continua, va directamente a la convocatoria ordinaria.
