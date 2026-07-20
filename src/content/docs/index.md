@@ -7,6 +7,30 @@ description: Apuntes de Planificación y Administración de Redes (PAR) — 7 Un
   <img src="/PAR/portada.png" alt="🌐 Planificación y Administración de Redes 🌐" style="max-width:70%;height:auto;border-radius:12px;margin:0 0 1.5rem;box-shadow:0 8px 40px rgba(0,0,0,0.15);">
 </div>
 
+## Tabla de ejemplo
+
+<table>
+  <thead>
+    <tr>
+      <th>Protocolo</th>
+      <th>Puerto</th>
+      <th>Uso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>HTTPS</strong></td>
+      <td><code>443</code></td>
+      <td>Comunicación segura</td>
+    </tr>
+    <tr>
+      <td><strong>SSH</strong></td>
+      <td><code>22</code></td>
+      <td>Administración remota</td>
+    </tr>
+  </tbody>
+</table>
+
 ## 📚 Unidades de Programación
 
 <div class="unit-grid">
