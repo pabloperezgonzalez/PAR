@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 const emojis = ['🌐','📡','🔌','🧮','🚀','🔀','🏢','🧭','🗣️','🌐','🩺','☁️'];
 
 const unitSlugs = [
-  '01-fundamentos-redes',
+  '01-caracterizacion-redes',
   '02-modelos-osi-analisis',
   '03-infraestructura-fisica',
   '04-ipv4-subnetting',
@@ -19,7 +19,7 @@ const unitSlugs = [
 ];
 
 const unitLabels = [
-  'Fundamentos de redes',
+  'Caracterización de redes',
   'Modelos OSI y análisis',
   'Infraestructura física',
   'IPv4 y subnetting',
