@@ -71,7 +71,7 @@ export default defineConfig({
           label: '📚 Unidades de Programación',
           items: unitSlugs.map((slug, i) => ({
             slug,
-            label: `${emojis[i]} UP ${i+1}. ${unitLabels[i]}`,
+            label: `${emojis[i]} UP${i+1}. ${unitLabels[i]}`,
           })),
         },
         {
