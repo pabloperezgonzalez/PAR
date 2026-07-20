@@ -7,10 +7,10 @@ description: Apuntes de Planificación y Administración de Redes (PAR) — 7 Un
   <img src="/PAR/portada.png" alt="🌐 Planificación y Administración de Redes 🌐" style="max-width:70%;height:auto;border-radius:12px;margin:0 0 1.5rem;box-shadow:0 8px 40px rgba(0,0,0,0.15);">
 </div>
 
-## Resultados de Aprendizaje
+## 📝 Resultados de Aprendizaje
 
 <div align="center">
-  <img src="/public/tables/RA.png" alt="🌐 Resultados de Aprendizaje 🌐" style="max-width:100%;height:auto;border-radius:12px;margin:0 0 1.5rem;box-shadow:0 8px 40px rgba(0,0,0,0.15);">
+  <img src="/PAR/public/tables/RA.png" alt="📝 Resultados de Aprendizaje 📝" style="max-width:100%;height:auto;border-radius:12px;margin:0 0 1.5rem;box-shadow:0 8px 40px rgba(0,0,0,0.15);">
 </div>
 
 ## 📚 Unidades de Programación
