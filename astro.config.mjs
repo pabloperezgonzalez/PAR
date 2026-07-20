@@ -57,7 +57,7 @@ export default defineConfig({
         root: { label: 'Castellano', lang: 'es' },
       },
       defaultLocale: 'root',
-      tableOfContents: false,
+      tableOfContents: true,
       head: [
         { tag: 'meta', attrs: { name: 'theme-color', content: '#2563eb' } },
         { tag: 'link', attrs: { rel: 'icon', type: 'image/svg+xml', href: '/PAR/favicon.svg' } },
