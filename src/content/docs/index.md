@@ -1,32 +1,10 @@
 ---
-title: Inicio
+title: Planificación y Administración de Redes (PAR)
 description: Apuntes de Planificación y Administración de Redes (PAR) — 7 Unidades de Programación — Pablo Pérez
 ---
 
 <div align="center">
   <img src="/PAR/portada.png" alt="🌐 Planificación y Administración de Redes — Curso completo con teoría, prácticas y boletines. Diseño premium, modo oscuro y buscador integrado." style="max-width:100%;height:auto;border-radius:12px;margin:0 0 1.5rem;box-shadow:0 8px 40px rgba(0,0,0,0.15);">
-</div>
-
-<div align="center" style="margin-bottom:2rem;">
-  <a href="/PAR/01-fundamentos-redes" style="display:inline-block;padding:0.75rem 2rem;background:linear-gradient(135deg,#2563eb,#1a4060);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;margin:0 0.5rem;">🌐 Empezar por la Unidad 1</a>
-  <a href="https://pabloperezgonzalez.github.io/PAR/" style="display:inline-block;padding:0.75rem 2rem;background:var(--sl-color-gray-5);color:var(--sl-color-white);border-radius:8px;text-decoration:none;font-weight:600;margin:0 0.5rem;">🐙 Ver en GitHub</a>
-</div>
-
-<div align="center">
-  <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank">
-    <img src="/PAR/cc-by-sa.png" alt="CC BY-SA 4.0" width="88" height="31">
-  </a>
-  <p style="font-size:0.8rem;color:var(--sl-color-gray-3);margin-top:0.5rem;">
-    <strong>Pablo Pérez</strong> — CC BY-SA 4.0
-  </p>
-</div>
-
-<div class="download-bar">
-  <p class="download-msg">⬇️ ¿Prefieres estudiar sin conexión? Descarga el curso completo</p>
-  <div class="download-links">
-    <a href="/PAR/pdf/ApuntesPAR.pdf" class="dl-btn">📄 PDF</a>
-    <a href="/PAR/epub/ApuntesPAR.epub" class="dl-btn">📱 EPUB</a>
-  </div>
 </div>
 
 ## 📚 Unidades
@@ -303,15 +281,4 @@ description: Apuntes de Planificación y Administración de Redes (PAR) — 7 Un
   </div>
 </div>
 
-</div>
-
-## 📄 Licencia
-
-<div style="text-align:center;">
-  <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank">
-    <img src="/PAR/cc-by-sa.png" alt="CC BY-SA 4.0" width="88" height="31">
-  </a><br>
-  <span style="font-size:0.85rem;color:var(--sl-color-gray-3);"><strong>CC BY-SA 4.0</strong> — <em>Pablo Pérez</em></span><br>
-  <span style="font-size:0.75rem;color:var(--sl-color-gray-3);"><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank">Licencia Creative Commons Atribución-CompartirIgual 4.0 Internacional</a></span><br>
-  <span style="font-size:0.7rem;color:var(--sl-color-gray-4);">Puedes compartir y adaptar el material para cualquier propósito, incluso comercial, siempre que reconozcas la autoría y compartas las modificaciones bajo la misma licencia.</span>
 </div>
