@@ -7,7 +7,7 @@ title: UP1 — Caracterización de redes
 **RA1. Reconoce la estructura de las redes de datos identificando sus elementos y principios de funcionamiento.**
 
 | Criterio de evaluación | Tipo | Ponderación |
-|-----------|-----|
+|-----------|-----|-----|
 | a) Se han identificado los factores que impulsan la continua expansión y evolución de las redes de datos. | Teórico |  % | 
 | b) Se han diferenciado los distintos medios de transmisión utilizados en las redes. | Teórico |  % | 
 | c) Se han reconocido los distintos tipos de red y sus topologías. | Teórico |  % | 
