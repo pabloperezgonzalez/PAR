@@ -9,24 +9,20 @@ title: 🌐 UP1.6. El concepto de protocolo de comunicación - CE1.e)
 | e) Se ha descrito el concepto de protocolo de comunicación. | Teórico | 10 % | 
 
 ### 1. Introducción
-
 Cuando dos personas desean comunicarse deben utilizar un idioma común y respetar unas normas básicas de comunicación. Por ejemplo, una conversación resulta imposible si cada persona habla un idioma diferente o si ambas hablan al mismo tiempo sin respetar los turnos.
 
-En las redes de datos ocurre exactamente lo mismo. Los dispositivos que forman parte de una red necesitan un conjunto de reglas que les indiquen **cómo iniciar una comunicación, cómo intercambiar la información y cómo finalizarla correctamente**. Estas reglas reciben el nombre de **protocolos de comunicación**.
-
-Sin los protocolos de comunicación sería imposible que dispositivos de distintos fabricantes, sistemas operativos o tecnologías pudieran intercambiar información.
+En las redes de datos ocurre exactamente lo mismo. Los dispositivos que forman parte de una red necesitan un conjunto de reglas que les indiquen **cómo iniciar una comunicación, cómo intercambiar la información y cómo finalizarla correctamente**. Estas reglas reciben el nombre de **protocolos de comunicación**. Sin los protocolos de comunicación sería imposible que dispositivos de distintos fabricantes, sistemas operativos o tecnologías pudieran intercambiar información.
 
 ### 2. ¿Qué es un protocolo de comunicación?
-
 Un **protocolo de comunicación** es un conjunto de normas y procedimientos que establece cómo deben intercambiar información dos o más dispositivos conectados a una red.
 
 Los protocolos definen todos los aspectos necesarios para que la comunicación sea correcta, desde el formato de los datos hasta la forma de detectar errores o confirmar la recepción de la información. En otras palabras, un protocolo actúa como un **lenguaje común** que todos los dispositivos deben comprender para poder comunicarse.
 
 ```text
-                                  PROTOCOLOS DE COMUNICACIÓN
+                                PROTOCOLOS DE COMUNICACIÓN
 
-                                    Conjunto de reglas
-                                            │
+                                  Conjunto de reglas
+                                           │
                         ┌──────────────────┼──────────────────┐
                         │                  │                  │
                         ▼                  ▼                  ▼
@@ -41,7 +37,6 @@ Los protocolos definen todos los aspectos necesarios para que la comunicación s
 ```
 
 ### 3. ¿Por qué son necesarios los protocolos?
-
 Imaginemos que un ordenador envía información a otro. Antes de transmitir los datos deben resolverse numerosas cuestiones:
 
 - ¿Cómo comienza la comunicación?
@@ -55,15 +50,12 @@ Imaginemos que un ordenador envía información a otro. Antes de transmitir los 
 Todas estas reglas están definidas por los protocolos. Sin ellas, cada fabricante utilizaría un sistema diferente y los dispositivos serían incompatibles entre sí.
 
 ### 4. Funciones de un protocolo de comunicación
-
 Los protocolos realizan numerosas funciones durante una comunicación. Entre las más importantes destacan:
 
 #### 4.1. Establecimiento de la comunicación
-
 Antes de comenzar el intercambio de información, los dispositivos deben comprobar que ambos están disponibles y preparados para comunicarse.
 
 #### 4.2. Identificación del origen y del destino
-
 Cada mensaje debe indicar:
 
 - Quién envía la información.
@@ -72,7 +64,6 @@ Cada mensaje debe indicar:
 Para ello se utilizan direcciones lógicas (IP) y direcciones físicas (MAC), dependiendo del protocolo empleado.
 
 #### 4.3. Formato de los datos
-
 Todos los dispositivos deben interpretar la información de la misma forma. El protocolo establece:
 
 - Cómo se organizan los datos.
@@ -80,7 +71,6 @@ Todos los dispositivos deben interpretar la información de la misma forma. El p
 - Cómo se codifica la información.
 
 #### 4.4. Control de errores
-
 Durante la transmisión pueden producirse errores provocados por interferencias o pérdidas de información. Muchos protocolos incorporan mecanismos para:
 
 - Detectar errores.
@@ -88,19 +78,15 @@ Durante la transmisión pueden producirse errores provocados por interferencias 
 - Garantizar la integridad de los datos.
 
 #### 4.5. Control del flujo
-
 No todos los dispositivos trabajan a la misma velocidad. Los protocolos regulan la cantidad de información transmitida para evitar que un equipo reciba más datos de los que puede procesar.
 
 #### 4.6. Finalización de la comunicación
-
 Cuando el intercambio de información ha terminado, el protocolo establece cómo cerrar correctamente la conexión.
 
 ### 5. Características de los protocolos
-
 Los protocolos presentan una serie de características comunes.
 
 #### 5.1. Están estandarizados
-
 La mayoría son desarrollados por organismos internacionales como:
 
 - IEEE.
@@ -110,11 +96,9 @@ La mayoría son desarrollados por organismos internacionales como:
 Gracias a ello pueden comunicarse dispositivos de distintos fabricantes.
 
 #### 5.2. Son independientes del fabricante
-
 Un ordenador con Windows puede comunicarse con un servidor Linux o con un dispositivo Cisco porque todos utilizan los mismos protocolos.
 
 #### 5.3. Trabajan conjuntamente
-
 Una comunicación no utiliza un único protocolo. Por el contrario, intervienen varios protocolos simultáneamente. Por ejemplo, al acceder a una página web pueden intervenir:
 
 - Ethernet.
@@ -126,7 +110,6 @@ Una comunicación no utiliza un único protocolo. Por el contrario, intervienen 
 Cada uno realiza una función diferente.
 
 ### 6. Protocolos y arquitectura por capas
-
 Como ya se estudió en el criterio anterior, las redes se organizan mediante arquitecturas por capas. Cada capa utiliza uno o varios protocolos especializados.
 
 <img
@@ -140,7 +123,6 @@ Como ya se estudió en el criterio anterior, las redes se organizan mediante arq
 Cada protocolo se comunica únicamente con su equivalente en el dispositivo remoto.
 
 ### 7. Principales protocolos de red
-
 A continuación se muestran algunos de los protocolos más utilizados.
 
 | Protocolo | Función |
@@ -158,7 +140,6 @@ A continuación se muestran algunos de los protocolos más utilizados.
 | SSH | Administración remota segura de equipos. |
 
 ### 8. Ejemplo de comunicación
-
 Cuando un usuario escribe la dirección:
 
 ```text
@@ -176,11 +157,9 @@ se ponen en funcionamiento numerosos protocolos.
 Aunque el usuario únicamente observa una página web, en realidad están trabajando simultáneamente varios protocolos especializados.
 
 ### 9. Diferencias entre protocolo, servicio y aplicación
-
 Es frecuente confundir estos conceptos.
 
 #### 9.1. Protocolo
-
 Define las reglas de comunicación. Ejemplo:
 
 - TCP.
@@ -188,7 +167,6 @@ Define las reglas de comunicación. Ejemplo:
 - HTTP.
 
 #### 9.2. Servicio
-
 Es la funcionalidad que ofrece un equipo a otros dispositivos de la red. Ejemplos:
 
 - Servicio web.
@@ -197,7 +175,6 @@ Es la funcionalidad que ofrece un equipo a otros dispositivos de la red. Ejemplo
 - Servicio de correo electrónico.
 
 #### 9.3. Aplicación
-
 Es el programa utilizado por el usuario. Ejemplos:
 
 - Google Chrome.
@@ -208,7 +185,6 @@ Es el programa utilizado por el usuario. Ejemplos:
 Las aplicaciones utilizan protocolos para acceder a los distintos servicios de red.
 
 ### 10. Caso práctico
-
 Una empresa va a implantar una nueva plataforma de trabajo colaborativo accesible desde Internet.
 
 Los empleados deberán consultar documentos mediante un navegador web, acceder remotamente a los servidores para realizar tareas de administración y recibir automáticamente una dirección IP al conectar sus equipos a la red corporativa.

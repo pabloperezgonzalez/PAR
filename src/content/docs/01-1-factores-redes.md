@@ -160,21 +160,21 @@ Todos estos factores están relacionados entre sí.
 La evolución de las redes responde, por tanto, a una combinación de necesidades tecnológicas, sociales y económicas.
 
 ### 5. Actividades
-#### Actividad 1
+#### Actividad 1 (40%)
 Explica con tus propias palabras por qué las redes de datos necesitan evolucionar continuamente.
 
-#### Actividad 2
+#### Actividad 2 (30%)
 Relaciona cada situación con el factor que impulsa la evolución de las redes.
 
-| Situación | Factor |
-|-----------|--------|
-| Un hospital comparte historiales médicos entre diferentes centros. | |
-| Un usuario ve una película en 4K por Internet. | |
-| Una empresa utiliza Microsoft 365 para trabajar. | |
-| Una vivienda dispone de sensores inteligentes. | |
-| Un empleado trabaja desde casa mediante VPN. | |
+| Situación | Factor | Justificación |
+|-----------|--------|--------|
+| Un hospital comparte historiales médicos entre diferentes centros. | | |
+| Un usuario ve una película en 4K por Internet. | | |
+| Una empresa utiliza Microsoft 365 para trabajar. | | |
+| Una vivienda dispone de sensores inteligentes. | | |
+| Un empleado trabaja desde casa mediante VPN. | | |
 
-#### Actividad 3
+#### Actividad 3 (30%)
 Indica si las siguientes afirmaciones son **verdaderas (V)** o **falsas (F)**.
 
 - ☐ Las redes actuales transportan menos información que hace diez años.
