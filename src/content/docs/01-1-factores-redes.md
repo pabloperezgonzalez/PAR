@@ -17,7 +17,7 @@ Esta evolución no ha ocurrido por casualidad. Las redes de datos crecen y cambi
 En este criterio, estudiaremos cuáles son los principales factores que impulsan esta evolución y cómo han transformado la forma en que utilizamos la tecnología.
 
 ### 2. ¿Qué entendemos por evolución de una red?
-Una **red** es un sistema de dos o más dispositivos o elementos interconectados que se comunican entre sí para compartir información, recursos y servicios.
+Una **red informática** es un sistema de dos o más dispositivos o elementos interconectados que se comunican entre sí para compartir información, recursos y servicios.
 
 Una **red de datos** no es un sistema estático. Con el paso del tiempo aparecen nuevas tecnologías, aumentan las necesidades de comunicación y se desarrollan nuevos servicios que obligan a mejorar las infraestructuras existentes. La evolución de una red puede implicar:
 
@@ -164,7 +164,6 @@ La evolución de las redes responde, por tanto, a una combinación de necesidade
 Explica con tus propias palabras por qué las redes de datos necesitan evolucionar continuamente.
 
 #### Actividad 2
-
 Relaciona cada situación con el factor que impulsa la evolución de las redes.
 
 | Situación | Factor |
@@ -176,7 +175,6 @@ Relaciona cada situación con el factor que impulsa la evolución de las redes.
 | Un empleado trabaja desde casa mediante VPN. | |
 
 #### Actividad 3
-
 Indica si las siguientes afirmaciones son **verdaderas (V)** o **falsas (F)**.
 
 - ☐ Las redes actuales transportan menos información que hace diez años.

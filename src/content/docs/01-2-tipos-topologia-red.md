@@ -9,15 +9,11 @@ title: 🌐 UP1.2. Tipos de red y topologías - CE1.c)
 | c) Se han reconocido los distintos tipos de red y sus topologías. | Teórico | 15 % | 
 
 ### 1. Introducción
-
-Una **red informática** es un conjunto de ordenadores y dispositivos conectados entre sí para compartir información, recursos y servicios.
-
-Las redes de datos pueden clasificarse de diferentes formas según su tamaño, el ámbito geográfico que abarcan, la tecnología empleada o la forma en que se conectan sus dispositivos. Conocer los distintos tipos de red y las topologías más utilizadas resulta fundamental para cualquier administrador de sistemas y redes, ya que cada una presenta características, ventajas e inconvenientes que la hacen más adecuada para determinados escenarios.
+Las **redes de datos** pueden clasificarse de diferentes formas según su tamaño, el ámbito geográfico que abarcan, la tecnología empleada o la forma en que se conectan sus dispositivos. Conocer los distintos tipos de red y las topologías más utilizadas resulta fundamental para cualquier administrador de sistemas y redes, ya que cada una presenta características, ventajas e inconvenientes que la hacen más adecuada para determinados escenarios.
 
 En este criterio, aprenderás a distinguir los principales tipos de redes y las topologías empleadas para interconectar los dispositivos que las componen.
 
 ### 2. ¿Qué es un tipo de red?
-
 Un **tipo de red** es una clasificación que permite agrupar las redes según determinadas características, siendo la más habitual el **alcance geográfico**.
 
 Dependiendo del tamaño del área que cubra una red, las tecnologías utilizadas, la velocidad de transmisión o los dispositivos necesarios pueden variar considerablemente. Por ejemplo, no requiere la misma infraestructura una red doméstica que conecta varios ordenadores que la red utilizada para comunicar las sedes de una empresa repartidas por varios países.
@@ -25,7 +21,6 @@ Dependiendo del tamaño del área que cubra una red, las tecnologías utilizadas
 ### 3. Clasificación de las redes según su alcance
 
 #### 3.1. PAN (Personal Area Network)
-
 Una **PAN** (*Personal Area Network*) es una red de muy pequeño alcance diseñada para conectar los dispositivos personales de un usuario Normalmente cubre una distancia inferior a los 10 metros.
 
 >💡 **Características:** Muy corto alcance, bajo consumo energético, generalmente inalámbrica y de fácil configuración.
@@ -35,7 +30,6 @@ Una **PAN** (*Personal Area Network*) es una red de muy pequeño alcance diseña
 >👉 **Ejemplos:** Un teléfono móvil conectado a unos auriculares Bluetooth, un smartwatch sincronizado con un smartphone o un ordenador conectado a un teclado y un ratón inalámbricos.
 
 #### 3.2. LAN (Local Area Network)
-
 Una **LAN** (*Local Area Network*) conecta dispositivos dentro de un área reducida, como una vivienda, una oficina, un laboratorio o un centro educativo. Es el tipo de red más habitual en empresas y organizaciones.
 
 >💡 **Características:** Alta velocidad de transmisión, baja latencia, administración propia y coste relativamente bajo.
@@ -45,13 +39,11 @@ Una **LAN** (*Local Area Network*) conecta dispositivos dentro de un área reduc
 >👉 **Ejemplos:** La red informática de un instituto, la red de una oficina o la red doméstica de una vivienda.
 
 #### 3.3. MAN (Metropolitan Area Network)
-
 Una **MAN** (*Metropolitan Area Network*) conecta redes distribuidas dentro de una misma ciudad o área metropolitana. Suelen ser gestionadas por operadores de telecomunicaciones o grandes organizaciones.
 
 >👉 **Ejemplos:** La red municipal de un ayuntamiento, la red que conecta los distintos edificios de una universidad repartidos por una ciudad o la infraestructura de fibra óptica de un operador local.
 
 #### 3.4. WAN (Wide Area Network)
-
 Una **WAN** (*Wide Area Network*) conecta redes situadas en diferentes ciudades, países o incluso continentes. Utiliza enlaces de larga distancia proporcionados normalmente por operadores de telecomunicaciones.
 
 >💡 **Características:** Gran cobertura geográfica, elevado número de dispositivos, coste superior al de una LAN y mayor complejidad de administración.
@@ -68,11 +60,9 @@ Una **WAN** (*Wide Area Network*) conecta redes situadas en diferentes ciudades,
 | WAN | País, continente o mundo | Empresa multinacional |
 
 ### 5. Clasificación según el medio de transmisión
-
 Las redes también pueden clasificarse según cómo viaja la información.
 
 #### 5.1. Redes cableadas
-
 Utilizan un medio físico para transmitir los datos. Los más habituales son:
 
 - Cable de par trenzado.
@@ -84,7 +74,6 @@ Utilizan un medio físico para transmitir los datos. Los más habituales son:
 >❌ **Inconvenientes:** Instalación más compleja y menor movilidad.
 
 #### 5.2. Redes inalámbricas
-
 Transmiten la información mediante ondas electromagnéticas. Las tecnologías más utilizadas son:
 
 - Wi-Fi
@@ -99,7 +88,6 @@ Transmiten la información mediante ondas electromagnéticas. Las tecnologías m
 ### 6. Clasificación según la arquitectura
 
 #### 6.1. Redes cliente-servidor
-
 En este modelo existen uno o varios **servidores** que ofrecen servicios al resto de equipos.
 
 Los clientes solicitan dichos servicios cuando los necesitan, como, por ejemplo:
@@ -115,7 +103,6 @@ Los clientes solicitan dichos servicios cuando los necesitan, como, por ejemplo:
 Es el modelo utilizado en prácticamente todas las empresas.
 
 #### 6.2. Redes entre iguales (Peer to Peer)
-
 Todos los equipos pueden actuar simultáneamente como clientes y servidores. No existe un servidor central.
 
 >✅ **Ventajas:** Configuración sencilla y bajo coste.
@@ -125,7 +112,6 @@ Todos los equipos pueden actuar simultáneamente como clientes y servidores. No 
 Actualmente se utilizan principalmente en pequeñas redes domésticas o para aplicaciones específicas.
 
 ### 7. ¿Qué es una topología de red?
-
 La **topología** describe la forma en que los dispositivos se conectan entre sí. Es importante distinguir entre:
 
 - **Topología física**, que representa la disposición real del cableado y los dispositivos.
@@ -199,7 +185,6 @@ Se utiliza en redes críticas y en el núcleo de Internet.
 | Malla | Muy alto | Muy alta | Alta | Redes críticas |
 
 ### 10. ¿Qué topologías encontramos actualmente?
-
 En las redes modernas predominan dos topologías:
 
 - **Estrella**, en redes LAN.
@@ -208,19 +193,17 @@ En las redes modernas predominan dos topologías:
 Las topologías en bus y en anillo tienen hoy un interés principalmente histórico, mientras que las topologías en malla se utilizan cuando se requiere una elevada disponibilidad del servicio.
 
 ### 11. Caso práctico
-
 Un instituto dispone de:
 
 - Tres aulas de informática.
 - Una biblioteca.
 - Un departamento de administración.
 - Una sala de profesores.
-- Un CPD donde se encuentran los servidores.
+- Un CPD (Centro de Procesamiento de Datos) donde se encuentran los servidores.
 
 Cada aula dispone de un switch conectado mediante fibra óptica al switch principal situado en el CPD.
 
 #### Reflexiona
-
 1. ¿Qué tipo de red utiliza el instituto?
 2. ¿Qué topología presenta la red?
 3. ¿Qué ocurriría si fallara uno de los switches de un aula?
