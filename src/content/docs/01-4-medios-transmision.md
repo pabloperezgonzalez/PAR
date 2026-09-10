@@ -9,15 +9,11 @@ title: 🌐 UP1.4. Medios de transmisión - CE1.b)
 | b) Se han diferenciado los distintos medios de transmisión utilizados en las redes. | Teórico |  10 % | 
 
 ### 1. Introducción
-
 Para que dos dispositivos puedan intercambiar información es necesario que exista un **medio de transmisión**, es decir, un canal por el que viajen las señales que contienen los datos.
 
-El medio de transmisión constituye uno de los elementos fundamentales de cualquier red, ya que condiciona aspectos tan importantes como la velocidad de transmisión, la distancia máxima entre dispositivos, el coste de la instalación, la seguridad o la resistencia frente a interferencias.
-
-Elegir el medio de transmisión adecuado es una de las decisiones más importantes durante el diseño de una infraestructura de red.
+El medio de transmisión constituye uno de los elementos fundamentales de cualquier red, ya que condiciona aspectos tan importantes como la velocidad de transmisión, la distancia máxima entre dispositivos, el coste de la instalación, la seguridad o la resistencia frente a interferencias. Elegir el medio de transmisión adecuado es una de las decisiones más importantes durante el diseño de una infraestructura de red.
 
 ### 2. ¿Qué es un medio de transmisión?
-
 Un **medio de transmisión** es el soporte físico o el canal por el que se transmiten los datos desde un dispositivo emisor hasta otro receptor. Dependiendo del tipo de red y de las necesidades de comunicación, la información puede viajar:
 
 - A través de un cable.
@@ -27,17 +23,16 @@ Un **medio de transmisión** es el soporte físico o el canal por el que se tran
 Todos los medios de transmisión tienen el mismo objetivo: transportar la información de forma rápida, fiable y segura.
 
 ### 3. Clasificación de los medios de transmisión
-
 Los medios de transmisión pueden clasificarse en dos grandes grupos:
 
 ```text
-                            Medios de transmisión
-                                    │
+                              Medios de transmisión
+                                      │
                         ┌─────────────┴─────────────┐
                         │                           │
                         ▼                           ▼
-                Medios guiados            Medios no guiados
-                    (Cableados)               (Inalámbricos)
+                Medios guiados              Medios no guiados
+                 (Cableados)                 (Inalámbricos)
 ```
 
 ### 4. Medios guiados
@@ -67,7 +62,6 @@ Protege la señal de interferencias externas usando una malla metálica global y
 />
 
 ##### Categorías del cable de par trenzado
-
 La velocidad máxima depende de la categoría del cable.
 
 | Categoría | Velocidad máxima | Frecuencia |
@@ -114,7 +108,6 @@ Es la utilizada por los operadores de telecomunicaciones.
 />
 
 ### 4.3. Cable coaxial
-
 Fue uno de los primeros medios utilizados en redes locales. Está formado por:
 
 - Un conductor central.
@@ -247,7 +240,6 @@ Las señales eléctricas pueden verse afectadas por campos electromagnéticos ge
 Por este motivo el cableado debe instalarse siguiendo determinadas normas de seguridad.
 
 ### 7. ¿Qué medio elegir?
-
 La elección depende de diversos factores.
 
 | Necesidad | Medio recomendado |
@@ -263,13 +255,12 @@ La elección depende de diversos factores.
 No existe un medio perfecto. Cada uno ofrece ventajas para determinadas situaciones.
 
 ### 8. Actividad
-
 Indica qué medio de transmisión utilizarías en cada uno de los siguientes casos y justifica tu respuesta.
 
-| Situación | Medio recomendado |
-|-----------|-------------------|
-| Conexión entre switches de diferentes plantas | |
-| Ordenadores de sobremesa | |
-| Portátiles de los empleados | |
-| Cámaras IP del aparcamiento | |
-| Smartphone de un visitante | |
+| Situación | Medio recomendado | Justificación |
+|-----------|-------------------|---------------|
+| Conexión entre switches de diferentes plantas | | |
+| Ordenadores de sobremesa | | |
+| Portátiles de los empleados | | |
+| Cámaras IP del aparcamiento | | |
+| Smartphone de un visitante | | |
