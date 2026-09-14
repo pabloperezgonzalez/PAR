@@ -181,7 +181,6 @@ Se utiliza en redes críticas y en el núcleo de Internet.
 | Bus | Bajo | Baja | Baja | Muy reducido |
 | Anillo | Medio | Baja | Media | Muy reducido |
 | Estrella | Medio | Alta | Alta | Muy frecuente |
-| Árbol | Medio-Alto | Alta | Muy alta | Muy frecuente |
 | Malla | Muy alto | Muy alta | Alta | Redes críticas |
 
 ### 10. ¿Qué topologías encontramos actualmente?
