@@ -192,8 +192,48 @@ Se comprueba que todos los pines aparecen correctamente conectados. Si existe al
 | Dos pines iguales | Cortocircuito. |
 | Orden incorrecto | Conductores intercambiados. |
 
-### 9. Caso práctico
+### 9. Actividad UP2.3. Verificación y certificación del cableado - CE2.c)
+En esta actividad aprenderás a utilizar un **comprobador de cables de red** para verificar el correcto funcionamiento de cables Ethernet. Deberás comprobar individualmente:
 
-Una empresa ha instalado el cableado de una nueva sala de informática con veinte puestos de trabajo. Antes de conectar los ordenadores al switch, el técnico debe comprobar que todos los cables Ethernet han sido correctamente fabricados y que no presentan errores de continuidad ni de crimpado. Durante la revisión, algunos cables muestran un funcionamiento correcto, mientras que otros presentan conductores intercambiados y conexiones abiertas.
+* Tu **cable directo**.
+* Tu **cable cruzado**.
 
-> **Analiza los resultados obtenidos con el comprobador de cableado e identifica qué tipo de error presenta cada cable, indicando qué acciones serían necesarias para corregirlo antes de poner la instalación en funcionamiento.**
+Además, tendrás que interpretar la información proporcionada por el comprobador y detectar posibles errores en el cableado.
+
+#### Organización
+* El alumnado trabajará en **parejas o grupos de 3 personas**.
+* Los grupos compartirán el material disponible.
+* **La realización de las comprobaciones será individual.**
+* Cada alumno/a deberá comprobar personalmente los dos cables y registrar sus resultados.
+* El material compartido deberá utilizarse de forma ordenada y responsable.
+
+> **Importante:** trabajar en grupo significa compartir herramientas, pero no que un compañero/a realice las comprobaciones por los demás.
+
+#### Registro de resultados
+Cada alumno/a deberá completar individualmente la siguiente tabla:
+
+| Cable   | Resultado del comprobador | ¿Correcto? | Incidencias detectadas |
+| :------ | :------------------------ | :--------: | :--------------------- |
+| Directo |                           |            |                        |
+| Cruzado |                           |            |                        |
+
+#### Cuestiones finales
+Responde individualmente:
+
+1. ¿Para qué sirve un comprobador de cables de red?
+2. ¿Qué diferencia existe entre el resultado de comprobar un cable directo y uno cruzado?
+3. ¿Qué significa que uno de los pines no presente continuidad?
+4. ¿Qué indica que dos pines aparezcan intercambiados?
+5. ¿Por qué es importante comprobar un cable antes de utilizarlo en una red?
+
+#### Rúbrica de evaluación
+| Criterio                           |                   0                  |                        2                        |                     4                     |                          6                          |                              8                             |                                                         10                                                         |
+| :--------------------------------- | :----------------------------------: | :---------------------------------------------: | :---------------------------------------: | :-------------------------------------------------: | :--------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------: |
+| **Uso del comprobador**            |          No sabe utilizarlo.         | Necesita realizar prácticamente todo con ayuda. |   Lo utiliza con bastantes indicaciones.  |      Lo utiliza correctamente con alguna ayuda.     |          Lo utiliza correctamente y con autonomía.         |                                     Lo utiliza con total autonomía y precisión.                                    |
+| **Comprobación del cable directo** |         No realiza la prueba.        |        Realiza la prueba incorrectamente.       | Realiza parte de la prueba correctamente. |  Realiza correctamente la prueba con alguna ayuda.  | Realiza la prueba correctamente e interpreta el resultado. |                                 Realiza e interpreta la prueba con total autonomía.                                |
+| **Comprobación del cable cruzado** |         No realiza la prueba.        |        Realiza la prueba incorrectamente.       | Realiza parte de la prueba correctamente. |  Realiza correctamente la prueba con alguna ayuda.  |      Realiza e interpreta correctamente el resultado.      |                                 Realiza e interpreta la prueba con total autonomía.                                |
+| **Interpretación de resultados**   |     No interpreta los resultados.    |        No identifica los errores básicos.       |   Identifica algún resultado con ayuda.   | Interpreta correctamente los resultados habituales. |   Identifica e interpreta correctamente las incidencias.   |                       Interpreta con precisión los resultados y explica las posibles causas.                       |
+| **Detección de errores**           |          No detecta errores.         |        No consigue localizar el problema.       |     Detecta el error con mucha ayuda.     |     Detecta errores habituales con alguna ayuda.    |        Detecta y explica correctamente los errores.        |                             Detecta, explica y propone una solución de forma autónoma.                             |
+| **Registro de resultados**         |      No registra los resultados.     |          El registro es muy incompleto.         |     Registra parte de los resultados.     |          Registra correctamente la mayoría.         |                Registro completo y ordenado.               |                               Registro completo, preciso y perfectamente organizado.                               |
+| **Autonomía individual**           |       No realiza las acciones.       |    Depende constantemente de sus compañeros.    |         Necesita ayuda frecuente.         |            Trabaja con cierta autonomía.            |        Realiza las comprobaciones de forma autónoma.       | Trabaja de forma completamente autónoma y ayuda a organizar el trabajo del grupo sin realizar las tareas de otros. |
+| **Uso y cuidado del material**     | Utiliza incorrectamente el material. |         Necesita supervisión constante.         |   Comete algunos errores de utilización.  |          Utiliza correctamente el material.         |  Utiliza el material correctamente y lo conserva ordenado. |                             Utiliza, cuida y organiza el material de forma responsable.                            |

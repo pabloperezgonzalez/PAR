@@ -263,6 +263,15 @@ Sin embargo, cada alumno/a deberá realizar de forma individual:
 
 > **Importante:** aunque el trabajo se realizará por parejas o grupos de 3 para compartir herramientas y material, **la construcción de los cables será individual**. Cada alumno/a deberá entregar y comprobar sus propios cables.
 
+#### Cuestiones finales
+Responde individualmente:
+1. ¿Qué diferencia existe entre un cable directo y un cable cruzado?
+2. ¿Qué normas se utilizan en cada extremo de un cable directo?
+3. ¿Qué normas se utilizan en cada extremo de un cable cruzado?
+4. ¿Qué conductores se intercambian en un cable cruzado Ethernet tradicional?
+5. ¿Qué función tiene el comprobador de cables?
+6. ¿Qué problemas puede provocar un orden incorrecto de los conductores?
+
 #### Rúbrica de evaluación
 | Criterio                      | 0 puntos                                        | 2 puntos                                          | 4 puntos                                                          | 6 puntos                                                   | 8 puntos                                          | 10 puntos                                                                                   |
 | ----------------------------- | ----------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------- |
