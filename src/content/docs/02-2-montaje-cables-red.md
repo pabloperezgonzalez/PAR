@@ -240,8 +240,36 @@ Los errores más frecuentes, que pueden provocar pérdidas de conectividad o lim
 | Cruzado | 568A-568B | Conectar dispositivos iguales (principalmente en equipos antiguos). |
 | Consola | Específico del fabricante | Configuración y administración de dispositivos de red. |
 
-### 11. Caso práctico
+### 11. Actividad UP2.2. Montaje de cables de red Ethernet y consola - CE2.b)
+En esta actividad aprenderás a **fabricar cables de red Ethernet siguiendo correctamente los estándares de cableado estructurado**. El alumnado deberá realizar individualmente:
 
-Una pequeña empresa va a instalar una nueva red local formada por varios ordenadores, un switch, un router y un punto de acceso inalámbrico. Antes de comenzar la instalación es necesario fabricar el cableado necesario para interconectar todos los dispositivos y disponer de un cable que permita realizar la configuración inicial del router. El técnico deberá seleccionar el tipo de cable adecuado para cada conexión, montar correctamente los conectores RJ-45 siguiendo el estándar correspondiente y verificar posteriormente que el cableado cumple las especificaciones requeridas.
+- Un **cable de red directo**.
+- Un **cable de red cruzado**.
 
-> **Analiza la instalación propuesta e indica qué tipo de cable utilizarías en cada conexión, justificando tu elección y describiendo el procedimiento básico de montaje de un cable Ethernet.**
+Además, deberá comprobar que ambos cables están correctamente montados.
+
+#### Organización
+La actividad se realizará en **parejas o grupos de 3 alumnos/as**. La agrupación permitirá compartir:
+
+- Bobina de cable de red.
+- Conectores RJ-45.
+- Pelacables o cortadora.
+- Crimpadora.
+
+Sin embargo, cada alumno/a deberá realizar de forma individual:
+- La identificación de los cables.
+- El montaje del cable directo.
+- El montaje del cable cruzado.
+
+> **Importante:** aunque el trabajo se realizará por parejas o grupos de 3 para compartir herramientas y material, **la construcción de los cables será individual**. Cada alumno/a deberá entregar y comprobar sus propios cables.
+
+#### Rúbrica de evaluación
+| Criterio                      | 0 puntos                                        | 2 puntos                                          | 4 puntos                                                          | 6 puntos                                                   | 8 puntos                                          | 10 puntos                                                                                   |
+| ----------------------------- | ----------------------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **Montaje del cable directo** | No realiza el cable o el montaje es incorrecto. | Realiza el montaje con numerosos errores.         | Realiza el cable con algunos errores que debe corregir.           | Realiza correctamente el cable con pequeñas imprecisiones. | Realiza correctamente el cable y los conectores.  | Realiza el cable correctamente, con precisión y autonomía.                                  |
+| **Montaje del cable cruzado** | No realiza el cable o el montaje es incorrecto. | Confunde las normas o presenta numerosos errores. | Realiza el cable con algunos errores que debe corregir.           | Realiza correctamente el cable con pequeñas imprecisiones. | Aplica correctamente T568A y T568B.               | Realiza el cable correctamente, con precisión y autonomía.                                  |
+| **Aplicación de T568A/T568B** | No conoce las normas.                           | Presenta numerosos errores en la distribución.    | Conoce las normas pero necesita ayuda para aplicarlas.            | Aplica correctamente las normas con alguna consulta.       | Aplica correctamente ambas normas.                | Las aplica con total precisión y comprende su finalidad.                                    |
+| **Uso de herramientas**       | Utiliza incorrectamente las herramientas.       | Necesita ayuda constante.                         | Utiliza las herramientas con algunas dificultades.                | Utiliza correctamente las herramientas.                    | Trabaja correctamente y con seguridad.            | Utiliza las herramientas con precisión, autonomía y seguridad.                              |
+| **Crimpado de conectores**    | Los conectores no funcionan.                    | Presenta varios errores de crimpado.              | Consigue crimpar los conectores después de realizar correcciones. | Los conectores funcionan correctamente.                    | Realiza un crimpado limpio y correcto.            | Realiza un crimpado preciso y profesional.                                                  |
+| **Corrección de errores**     | No identifica los errores.                      | Necesita ayuda para localizar el problema.        | Identifica algunos errores.                                       | Identifica y corrige los errores principales.              | Localiza y corrige los errores de forma autónoma. | Diagnostica rápidamente el problema y explica su causa.                                     |
+| **Trabajo y organización**    | No respeta las instrucciones.                   | Necesita supervisión constante.                   | Trabaja con cierta organización.                                  | Trabaja correctamente y respeta el material.               | Se organiza bien y coopera con el grupo.          | Trabaja con autonomía, orden y responsabilidad, facilitando el uso compartido del material. |
