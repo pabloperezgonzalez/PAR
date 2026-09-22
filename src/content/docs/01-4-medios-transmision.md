@@ -44,11 +44,11 @@ Es el medio de transmisión más utilizado en las redes Ethernet actuales. Está
 #####   a) UTP (Unshielded Twisted Pair)
 No dispone de apantallamiento. Es el cable más utilizado en redes LAN.
 
-#####   b) STP (Shielded Twisted Pair)
-Incluye una malla metálica que protege frente a interferencias. Se utiliza en entornos industriales o con elevada contaminación electromagnética.
+#####   b) FTP (Foiled Twisted Pair)
+Dispone de una pantalla global para mejorar su nivel de protección ante interferencias externas. Ofrece una protección intermedia entre UTP y STP.
 
-#####   c) FTP (Foiled Twisted Pair)
-Dispone de una lámina metálica que envuelve el conjunto de pares. Ofrece una protección intermedia entre UTP y STP.
+#####   c) STP (Shielded Twisted Pair)
+Cada par va recubierto por una malla conductora que actúa de pantalla frente a interferencias y ruido eléctrico. Se utiliza en entornos industriales o con elevada contaminación electromagnética.
 
 #####   d) SFTP (Shielded Foiled Twisted Pair) 
 Protege la señal de interferencias externas usando una malla metálica global y una lámina de aluminio por cada par de cables. Combina la protección de STP y FTP.

@@ -136,6 +136,8 @@ Red A ─── Router ─── Internet ─── Router ─── Red B
 
 >✅ **Ventajas:** Permite comunicar distintas redes, es escalable, admite múltiples protocolos y mejora la organización de la infraestructura.
 
+>❌ **Inconvenientes:** Limitaciones de cobertura inalámbrica e interferencias y conlleva riesgos de seguridad en la red.
+
 #### 6.2. Switch de capa 3
 Los **Switches multicapa** combinan las funciones de un switch tradicional con las capacidades de encaminamiento de un router. Se utilizan habitualmente en:
 
