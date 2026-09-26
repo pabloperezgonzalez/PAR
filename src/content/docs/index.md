@@ -28,3 +28,16 @@ Los criterios de calificación dependen del peso de cada Resultado de Aprendizaj
 - La **calificación final** del módulo al finalizar el curso será la media ponderada de cada resultado de aprendizaje, debiendo obtener una calificación mínima del 50% y superando obligatoriamente todos los RA.
 - Para las diferentes ausencias, si coincide con un instrumento de evaluación correspondiente a un criterio, deberá siempre **justificarse con un justificante válido por autoridad** para poder recuperarlo. En caso contrario, se evaluará con una nota de 0.
 - Por otro lado, para tener derecho a la evaluación continua, el alumno/a **no tendrá más de un 15% de faltas de asistencia injustificadas**. Si el alumno/a pierde la evaluación continua, va directamente a la convocatoria ordinaria.
+
+## 📝 Criterios de realización de actividades
+A la hora de realizar y documentar actividades, los criterios de documentación que se tendrán en cuenta para valorar y calificar dichas actividades son los siguientes:
+1. No cometer faltas de ortografía y gramática.
+2. Solo se puede utilizar un idioma en todo el documento.
+3. No realizar fallos al utilizar los signos de puntuación.
+4. Los párrafos estarán adecuadamente delimitados, con alineación justificada.
+5. No se dejarán páginas en blanco.
+6. Cada paso del proceso tendrá su correspondiente captura de pantalla, que deberá tener alineación centrada.
+7. Cada captura de pantalla contendrá una descripción detallada, que explique la acción llevada a cabo en ese paso por el alumnado y su explicación técnica.
+8. No podrán incluirse capturas de pantalla sin su correspondiente descripción.
+9. Las capturas de pantalla deben tener las dimensiones adecuadas (no se deben dimensionar erróneamente, no deben estar ni alargadas ni achatadas). Deben de ser grandes y el tamaño de letra de la captura debe ser igual de grande que el tamaño de letra de las descripciones del documento.
+10. Las capturas de pantalla que muestren el resultado final deben tener mayor nivel de detalle, explicando el resultado obtenido y la justificación de su correcto funcionamiento.
