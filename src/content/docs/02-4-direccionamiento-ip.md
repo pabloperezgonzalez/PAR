@@ -1,5 +1,5 @@
 ---
-title: 📡 UP2.5. Direccionamiento IPv4 e IPv6 - CE2.d)
+title: 📡 UP2.4. Direccionamiento IPv4 e IPv6 - CE2.d)
 ---
 
 ### RA2. Integra ordenadores y periféricos en redes cableadas e inalámbricas, evaluando su funcionamiento y prestaciones.
@@ -219,54 +219,7 @@ Y el equipo será el host número:
 
 Todos los dispositivos cuya dirección comience por **192.168.10** pertenecerán a la misma red.
 
-### 14. Comprobación de la configuración
-Una vez asignada la dirección IP conviene verificar que la configuración es correcta. Las comprobaciones más habituales son:
-
-- Consultar la dirección IP.
-- Verificar la máscara.
-- Comprobar la puerta de enlace.
-- Comprobar la resolución DNS.
-- Realizar pruebas de conectividad.
-
-#### 14.1. Herramientas en Windows
-Consultar la configuración:
-
-```cmd
-ipconfig
-```
-
-Información completa:
-
-```cmd
-ipconfig /all
-```
-
-Comprobar conectividad:
-
-```cmd
-ping 192.168.1.1
-```
-
-#### 14.2. Herramientas en Linux
-Consultar interfaces:
-
-```bash
-ip addr
-```
-
-Consultar rutas:
-
-```bash
-ip route
-```
-
-Comprobar conectividad:
-
-```bash
-ping 192.168.1.1
-```
-
-### 15. Errores habituales
+### 13. Errores habituales
 Los problemas más frecuentes relacionados con el direccionamiento IP son:
 
 - Dos equipos con la misma dirección IP.
@@ -276,7 +229,7 @@ Los problemas más frecuentes relacionados con el direccionamiento IP son:
 - Dirección IP fuera del rango de la red.
 - Configuración DHCP incorrecta.
 
-### 16. Buenas prácticas
+### 14. Buenas prácticas
 Al configurar una red es recomendable:
 
 - Utilizar un plan de direccionamiento.
@@ -286,8 +239,24 @@ Al configurar una red es recomendable:
 - Documentar todas las configuraciones.
 - Verificar la conectividad tras cada cambio.
 
-### 17. Caso práctico
+### 15. Actividades de repaso
+Haciendo todos los cálculos necesarios **a mano**, extrae la siguiente información en cada uno de los casos presentados, indicando:
 
-Un centro educativo va a incorporar veinte ordenadores nuevos a una red local cuya dirección es **192.168.50.0/24**. Algunos equipos estarán destinados al alumnado y obtendrán automáticamente su configuración mediante un servidor DHCP, mientras que el servidor de archivos, la impresora de red y el switch gestionable deberán disponer de una dirección IP fija. El administrador debe planificar la asignación de direcciones IP, configurar la máscara de subred y establecer correctamente la puerta de enlace para garantizar que todos los dispositivos puedan comunicarse entre sí y acceder a Internet.
+- La porción de red y la porción de host mediante la notación en binario.
+- La dirección de red (binario y decimal).
+- La dirección de difusión (binario y decimal).
+- El rango de direcciones de host válidas (decimal).
+- Cantidad de hosts que puede albergar la red.
 
-> **Analiza la situación propuesta y explica qué parámetros de red deben configurarse en cada dispositivo, indicando cuándo utilizarías una dirección IP estática y cuándo sería más conveniente emplear una asignación dinámica mediante DHCP. Justifica tu respuesta.**
+|   Nº  | Dirección IP     | Máscara CIDR |
+| :---: | :--------------- | :----------: |
+| **1** | `192.168.1.75`   |     `/24`    |
+| **2** | `192.168.10.125` |     `/25`    |
+| **3** | `192.168.20.100` |     `/26`    |
+| **4** | `192.168.30.200` |     `/27`    |
+| **5** | `192.168.40.150` |     `/28`    |
+| **6** | `10.0.15.200`    |     `/20`    |
+| **7** | `172.16.45.130`  |     `/22`    |
+| **8** | `172.20.100.200` |     `/23`    |
+| **9** | `192.168.100.130`|     `/29`    |
+| **10** | `10.10.50.70`   |     `/30`    |

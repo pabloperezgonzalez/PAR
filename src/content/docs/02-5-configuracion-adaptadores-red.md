@@ -1,5 +1,5 @@
 ---
-title: 📡 UP2.4. Configuración de adaptadores de red - CE2.e)
+title: 📡 UP2.5. Configuración de adaptadores de red - CE2.e)
 ---
 
 ### RA2. Integra ordenadores y periféricos en redes cableadas e inalámbricas, evaluando su funcionamiento y prestaciones.
