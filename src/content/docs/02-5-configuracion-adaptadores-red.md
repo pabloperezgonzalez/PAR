@@ -285,8 +285,69 @@ Al configurar adaptadores de red es recomendable:
 - Documentar cualquier cambio realizado.
 - Verificar la conectividad tras la configuración.
 
-### 11. Caso práctico
+### 11. Actividad UP2.5. Configuración de adaptadores de red - CE2.e)
+Crea una cuenta en **Cisco Networking Academy (NetAcad)** para poder descargar e instalar **Cisco Packet Tracer**.
+Una vez instalado, crea una pequeña topología formada por **dos ordenadores**. Configura manualmente el adaptador de red de cada equipo asignándole una dirección IPv4 y comprueba que los parámetros se han aplicado correctamente.
 
-Una empresa acaba de instalar varios ordenadores con **Windows 11** y **Ubuntu Desktop** para renovar su aula de formación. Antes de incorporarlos a la red corporativa, el administrador debe comprobar que todos los adaptadores de red han sido reconocidos correctamente, instalar los controladores necesarios y configurar la conectividad tanto por cable como mediante Wi-Fi. Algunos equipos deberán obtener automáticamente la configuración IP mediante un servidor DHCP, mientras que otros, destinados a tareas de administración, necesitarán una configuración estática con dirección IP, máscara, puerta de enlace y servidores DNS previamente definidos. Una vez realizada la configuración, será necesario verificar que todos los equipos pueden comunicarse correctamente con el resto de dispositivos de la red y acceder a los servicios compartidos.
+> **Importante:** en esta actividad no se evaluará la conectividad entre los equipos. La comprobación de la comunicación entre dispositivos se trabajará posteriormente en otros criterios del RA2.
 
-> **Analiza la situación planteada e indica qué pasos seguirías para configurar los adaptadores de red en ambos sistemas operativos, justificando cuándo utilizarías una configuración automática mediante DHCP y cuándo sería más adecuado emplear una configuración IP estática. Explica también cómo comprobarías que la configuración realizada es correcta.**
+##### Tarea 1. Crear la cuenta de Cisco NetAcad
+
+* Accede a [Cisco Networking Academy](https://www.netacad.com/es).
+* Crea una cuenta personal.
+* Inicia sesión.
+* Descarga e instala **Cisco Packet Tracer** (si no lo tienes instalado en tu ordenador).
+
+##### Tarea 2. Crear la topología
+En Packet Tracer:
+
+* Añade **dos dispositivos PC** al área de trabajo.
+* Identifícalos como `PC1` y `PC2`.
+* Conecta cada PC mediante su interfaz de red correspondiente.
+
+##### Tarea 3. Configurar el adaptador de red de PC1
+Accede a: **PC1 → Desktop → IP Configuration** y configura manualmente:
+
+| Parámetro         | Valor           |
+| :---------------- | :-------------- |
+| Dirección IPv4    | `192.168.10.10` |
+| Máscara de subred | `255.255.255.0` |
+
+No es necesario configurar una puerta de enlace ni servidores DNS para esta actividad.
+
+##### Tarea 4. Configurar el adaptador de red de PC2
+Realiza el mismo procedimiento en `PC2`:
+
+| Parámetro         | Valor           |
+| :---------------- | :-------------- |
+| Dirección IPv4    | `192.168.10.20` |
+| Máscara de subred | `255.255.255.0` |
+
+##### Tarea 5. Comprobar la configuración
+Desde cada ordenador, accede a: **Desktop → Command Prompt**
+
+Ejecuta:
+
+```text
+ipconfig
+```
+
+Comprueba que la dirección IPv4 y la máscara de subred coinciden con los valores configurados anteriormente.
+
+##### Tarea 6. Registra los resultados:
+| Equipo | IPv4 configurada | IPv4 comprobada | Máscara comprobada |
+| :----- | :--------------: | :-------------: | :----------------: |
+| PC1    |  `192.168.10.10` |                 |                    |
+| PC2    |  `192.168.10.20` |                 |                    |
+
+##### Tarea 7. Cuestiones finales
+Responde brevemente:
+
+1. ¿Qué función tiene el adaptador de red de un ordenador?
+2. ¿Qué diferencia existe entre una dirección IPv4 y una máscara de subred?
+3. ¿Qué ocurre si se introduce una dirección IP diferente de la que se pretendía configurar?
+4. ¿Por qué es importante comprobar la configuración después de realizarla?
+5. ¿Qué comando has utilizado para comprobar la configuración IP del equipo?
+
+##### Tarea 8. Entrega
+La entrega será individual, en formato PDF y se realizará a través de Aules.
