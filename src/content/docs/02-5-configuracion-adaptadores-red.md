@@ -291,21 +291,21 @@ Una vez instalado, crea una pequeña topología formada por **dos ordenadores**.
 
 > **Importante:** en esta actividad no se evaluará la conectividad entre los equipos. La comprobación de la comunicación entre dispositivos se trabajará posteriormente en otros criterios del RA2.
 
-##### Tarea 1. Crear la cuenta de Cisco NetAcad
+##### Paso 1. Crear la cuenta de Cisco NetAcad
 
 * Accede a [Cisco Networking Academy](https://www.netacad.com/es).
 * Crea una cuenta personal.
 * Inicia sesión.
 * Descarga e instala **Cisco Packet Tracer** (si no lo tienes instalado en tu ordenador).
 
-##### Tarea 2. Crear la topología
+##### Paso 2. Crear la topología
 En Packet Tracer:
 
 * Añade **dos dispositivos PC** al área de trabajo.
 * Identifícalos como `PC1` y `PC2`.
 * Conecta cada PC mediante su interfaz de red correspondiente.
 
-##### Tarea 3. Configurar el adaptador de red de PC1
+##### Paso 3. Configurar el adaptador de red de PC1
 Accede a: **PC1 → Desktop → IP Configuration** y configura manualmente:
 
 | Parámetro         | Valor           |
@@ -315,7 +315,7 @@ Accede a: **PC1 → Desktop → IP Configuration** y configura manualmente:
 
 No es necesario configurar una puerta de enlace ni servidores DNS para esta actividad.
 
-##### Tarea 4. Configurar el adaptador de red de PC2
+##### Paso 4. Configurar el adaptador de red de PC2
 Realiza el mismo procedimiento en `PC2`:
 
 | Parámetro         | Valor           |
@@ -323,7 +323,7 @@ Realiza el mismo procedimiento en `PC2`:
 | Dirección IPv4    | `192.168.10.20` |
 | Máscara de subred | `255.255.255.0` |
 
-##### Tarea 5. Comprobar la configuración
+##### Paso 5. Comprobar la configuración
 Desde cada ordenador, accede a: **Desktop → Command Prompt**
 
 Ejecuta:
@@ -334,13 +334,13 @@ ipconfig
 
 Comprueba que la dirección IPv4 y la máscara de subred coinciden con los valores configurados anteriormente.
 
-##### Tarea 6. Registra los resultados:
+##### Paso 6. Registra los resultados:
 | Equipo | IPv4 configurada | IPv4 comprobada | Máscara comprobada |
 | :----- | :--------------: | :-------------: | :----------------: |
 | PC1    |  `192.168.10.10` |                 |                    |
 | PC2    |  `192.168.10.20` |                 |                    |
 
-##### Tarea 7. Cuestiones finales
+##### Paso 7. Cuestiones finales
 Responde brevemente:
 
 1. ¿Qué función tiene el adaptador de red de un ordenador?
@@ -349,5 +349,5 @@ Responde brevemente:
 4. ¿Por qué es importante comprobar la configuración después de realizarla?
 5. ¿Qué comando has utilizado para comprobar la configuración IP del equipo?
 
-##### Tarea 8. Entrega
+##### Paso 8. Entrega
 La entrega será individual, en formato PDF y se realizará a través de Aules.

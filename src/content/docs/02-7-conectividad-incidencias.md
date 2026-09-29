@@ -280,10 +280,79 @@ Para comprobar la conectividad de una red es recomendable:
 - Evitar realizar varios cambios simultáneamente.
 - Utilizar siempre herramientas de diagnóstico adecuadas.
 
-### 9. Caso práctico
+### 9. Actividad UP2.7. Comprobación de la conectividad y resolución de incidencias - CE2.g)
+A partir de la red creada en las actividades de los **CE2.e) y CE2.f)**, utiliza los dos ordenadores configurados y conectados al switch para **comprobar que existe comunicación entre ellos** mediante diferentes herramientas de diagnóstico de red.
 
-Una empresa dispone de una red local formada por ordenadores conectados mediante **Ethernet**, varios ordenadores portátiles conectados por **Wi-Fi**, un servidor de archivos y un punto de acceso inalámbrico. Tras una actualización de la infraestructura, algunos equipos conectados por cable pueden acceder correctamente a Internet, mientras que varios portátiles inalámbricos no consiguen comunicarse con el servidor ni acceder a determinados recursos compartidos.
+#### Paso 1. Comprobar la configuración IP
+Desde cada ordenador, utiliza:
 
-El administrador debe comprobar la conectividad entre los distintos dispositivos utilizando las herramientas de diagnóstico disponibles y determinar si el problema está relacionado con la configuración IP, la red inalámbrica, el punto de acceso o algún otro elemento de la infraestructura.
+```text
+ipconfig
+```
 
-> **Analiza la situación planteada y describe el procedimiento que seguirías para comprobar la conectividad entre los distintos dispositivos, indicando qué herramientas utilizarías en cada fase del diagnóstico y cómo interpretarías los resultados obtenidos.**
+Comprueba que mantienen la configuración:
+
+| Equipo | Dirección IPv4  | Máscara         |
+| :----- | :-------------- | :-------------- |
+| PC1    | `192.168.10.10` | `255.255.255.0` |
+| PC2    | `192.168.10.20` | `255.255.255.0` |
+
+#### Paso 2. Comprobar la conectividad mediante `ping`
+Desde **PC1**, ejecuta:
+
+```text
+ping 192.168.10.20
+```
+
+Después, desde **PC2**, ejecuta:
+
+```text
+ping 192.168.10.10
+```
+
+Comprueba si se reciben respuestas correctamente y registra los resultados:
+
+| Prueba    | Resultado |
+| :-------- | :-------- |
+| PC1 → PC2 |           |
+| PC2 → PC1 |           |
+
+#### Paso 3. Interpretar los resultados
+Determina si existe conectividad entre los dos equipos. Si la comunicación no funciona, revisa:
+
+* Dirección IP.
+* Máscara de subred.
+* Conexiones entre los dispositivos.
+* Estado de las interfaces.
+* Configuración de los adaptadores de red.
+
+Corrige el problema y vuelve a realizar la prueba.
+
+#### Paso 4. Realizar una prueba con una configuración incorrecta
+Modifica temporalmente la dirección IP de **PC2** para utilizar una dirección perteneciente a otra red:
+
+```text
+IP:       192.168.20.20
+Máscara:  255.255.255.0
+```
+
+Desde PC1 vuelve a ejecutar:
+
+```text
+ping 192.168.20.20
+```
+
+Observa el resultado y explica por qué la comunicación no se produce directamente. Después, **restaura la configuración original** de PC2.
+
+#### Paso 5. Cuestiones finales
+Responde las siguientes cuestiones:
+
+1. ¿Qué comando has utilizado para comprobar la conectividad?
+2. ¿Qué significa recibir respuestas al realizar un `ping`?
+3. ¿Qué puede indicar que el `ping` no reciba respuestas?
+4. ¿Por qué los dos equipos pueden comunicarse directamente cuando pertenecen a la misma red?
+5. ¿Qué ocurre cuando PC1 y PC2 tienen direcciones pertenecientes a redes diferentes?
+
+#### Paso 6. Entrega
+La entrega será individual, en formato PDF y se realizará a través de Aules.
+

@@ -255,7 +255,55 @@ Durante la integración de dispositivos es recomendable:
 - Cambiar las contraseñas predeterminadas.
 - Documentar la configuración realizada.
 
-### 16. Caso práctico
-Una empresa va a inaugurar una nueva oficina con diez puestos de trabajo. La infraestructura de red está formada por un switch, un router, un punto de acceso Wi-Fi, una impresora de red, un servidor de archivos y varias cámaras IP. El administrador debe integrar todos los dispositivos en la red corporativa, configurando correctamente las conexiones cableadas e inalámbricas, asignando direcciones IP adecuadas y verificando que todos los equipos pueden comunicarse entre sí y acceder a los servicios disponibles.
+### 16. Actividad UP2.6. Integración de dispositivos en redes cableadas e inalámbricas - CE2.f)
+A partir de los dos ordenadores ya configurados en la actividad del **CE2.e)**, amplía la red incorporando un **conmutador (switch)** y conecta los equipos a él para formar una pequeña red cableada. El objetivo es **integrar correctamente los dispositivos y comprobar que los enlaces físicos se encuentran correctamente establecidos**.
 
-> **Analiza la infraestructura propuesta y describe el procedimiento que seguirías para integrar cada uno de los dispositivos en la red, indicando qué configuración sería necesaria en cada caso y cómo comprobarías que la integración se ha realizado correctamente.**
+> **Importante:** en esta actividad no se realizará ninguna prueba de conectividad entre los equipos.
+
+#### Paso 1. Ampliar la topología
+En Cisco Packet Tracer:
+
+* Mantén los equipos `PC1` y `PC2` de la actividad anterior.
+* Añade un **switch** a la topología.
+* Conecta `PC1` al switch.
+* Conecta `PC2` al switch.
+* Utiliza las interfaces Ethernet correspondientes.
+
+La topología deberá quedar similar a:
+
+```text
+PC1 ───────── Switch ───────── PC2
+```
+
+#### Paso 2. Comprobar las conexiones
+Comprueba que:
+
+* Cada PC está conectado a un puerto del switch.
+* Los cables están conectados correctamente.
+* Las interfaces utilizadas muestran que existe un enlace físico activo.
+
+#### Paso 3. Identificar los dispositivos y puertos
+Identifica en la topología:
+
+* Los dos ordenadores.
+* El switch.
+* La interfaz de red utilizada en cada PC.
+* El puerto del switch utilizado para cada conexión.
+
+Completa:
+
+| Dispositivo | Interfaz/puerto | Dispositivo conectado |
+| :---------- | :-------------- | :-------------------- |
+| PC1         |                 |                       |
+| PC2         |                 |                       |
+
+#### Paso 4. Comprobar la configuración IP
+Sin modificar la configuración realizada en la actividad anterior, comprueba que los equipos mantienen sus direcciones:
+
+| Equipo | Dirección IPv4  | Máscara         |
+| :----- | :-------------- | :-------------- |
+| PC1    | `192.168.10.10` | `255.255.255.0` |
+| PC2    | `192.168.10.20` | `255.255.255.0` |
+
+#### Paso 5. Entrega
+La entrega será individual, en formato PDF y se realizará a través de Aules.
