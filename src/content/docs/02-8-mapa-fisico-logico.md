@@ -101,6 +101,11 @@ Un buen mapa de red debería incluir:
 Existen numerosas herramientas para crear mapas de red. Algunas permiten diseñarlos manualmente y otras pueden generarlos automáticamente.
 
 #### 8.1. Herramientas de diseño manual
+##### Cisco Packet Tracer
+Esta herramienta cuenta con dos entornos de trabajo diseñados específicamente para realizar diagramas físicos y lógicos. Aunque es una herramienta de simulación y no de documentación pura, es excelente para diseñar, estructurar y probar redes antes de implementarlas.
+
+>💡 **Características:** Gratuito, simulación y verificación en tiempo real y configuración real de dispositivos (CLI).
+
 ##### Draw.io (diagrams.net)
 Es una de las herramientas más utilizadas.
 
@@ -179,8 +184,88 @@ Para representar correctamente una red es recomendable:
 - Diferenciar claramente la parte física y lógica.
 - Mantener versiones actualizadas.
 
-### 10. Caso práctico
+### 10. Actividad UP2.8. Representación del mapa físico y lógico de la red - CE2.h)
+Una pequeña empresa dispone de **6 redes diferentes**, correspondientes a distintos espacios o departamentos. Utilizando **Cisco Packet Tracer**, representa su **esquema físico y lógico**, indicando los dispositivos, sus conexiones, las direcciones IP y el espacio al que pertenece cada red. La representación debe ser clara y permitir identificar fácilmente **qué dispositivos hay, dónde están ubicados y a qué red pertenecen**.
 
-Un instituto dispone de varias aulas de informática, una sala de servidores, puntos de acceso Wi-Fi y diferentes switches distribuidos por el edificio. El departamento de informática desea crear una documentación completa de la red para facilitar futuras ampliaciones y mejorar la resolución de incidencias. Para ello, será necesario representar tanto la ubicación física de los equipos como las relaciones lógicas entre las distintas subredes, direcciones IP y servicios disponibles.
+#### Paso 1. Redes de la empresa
+La empresa estará formada por las siguientes **6 redes**:
 
-> **Analiza la infraestructura descrita e indica qué información incluirías en el mapa físico y en el mapa lógico de la red. Explica también qué herramientas utilizarías para elaborar esta documentación y qué ventajas aportaría mantenerla actualizada.**
+| Red   | Espacio           | Red IP            | Dispositivos |
+| :---- | :---------------- | :---------------- | :----------- |
+| Red 1 | Recepción         | `192.168.10.0/24` | 1 PC         |
+| Red 2 | Administración    | `192.168.20.0/24` | 2 PCs        |
+| Red 3 | Dirección         | `192.168.30.0/24` | 3 PCs        |
+| Red 4 | Desarrollo        | `192.168.40.0/24` | 4 laptop     |
+| Red 5 | Sala de reuniones | `192.168.50.0/24` | 1 PC         |
+| Red 6 | Servidores        | `192.168.60.0/24` | 3 servidores |
+
+Cada red tendrá su **propio switch (SW-XX)**, que se conectará a un **switch central (SWC)** ubicado en la sala de servidores. Además, toda la empresa utilizará solamente **1 router (R1)**.
+
+#### Paso 2. Direccionamiento IP
+Cada dispositivo deberá tener una dirección IP perteneciente a la red que corresponda a su espacio. Por ejemplo:
+
+| Dispositivo  | Espacio        | Dirección IP    | Máscara         |
+| :----------- | :------------- | :-------------- | :-------------- |
+| PC-RECEPCION | Recepción      | `192.168.10.10` | `255.255.255.0` |
+| PC-ADMIN-01  | Administración | `192.168.20.10` | `255.255.255.0` |
+| PC-ADMIN-02  | Administración | `192.168.20.11` | `255.255.255.0` |
+| ...          | ...            | ...             | ...             |
+
+El resto de direcciones deberá ser asignado por el alumnado siguiendo el mismo criterio.
+
+#### Paso 3. Representación física
+En **Cisco Packet Tracer**, representa la distribución física de la empresa. Deberás:
+
+1. Crear los espacios correspondientes a las 6 redes.
+2. Colocar los dispositivos dentro del espacio al que pertenecen.
+3. Añadir los switches y el router necesarios.
+4. Conectar físicamente los dispositivos mediante los cables correspondientes.
+5. Organizar la topología para que resulte clara y fácil de interpretar.
+6. **Nombrar todos los dispositivos**.
+
+#### Paso 4. Representación lógica
+Sobre la misma topología, representa la estructura lógica de la red. Cada dispositivo deberá mostrar claramente:
+
+* Nombre del dispositivo.
+* Dirección IP.
+* Máscara de subred.
+* Red a la que pertenece.
+* Espacio o departamento correspondiente.
+
+Debes utilizar **etiquetas de texto** de Packet Tracer para identificar cada red.
+
+Por ejemplo:
+
+```text
+RED 2 - ADMINISTRACIÓN
+192.168.20.0/24
+
+PC-ADMIN-01
+192.168.20.10
+
+PC-ADMIN-02
+192.168.20.11
+```
+#### Paso 5. Cuestiones finales
+Responde brevemente:
+
+1. ¿Cuántas redes diferentes tiene la empresa?
+2. ¿Cómo puedes identificar visualmente a qué red pertenece cada dispositivo?
+3. ¿Por qué es importante nombrar correctamente los dispositivos?
+4. ¿Qué diferencia existe entre el esquema físico y el esquema lógico?
+5. ¿Qué información permite conocer el mapa lógico que no se aprecia directamente en el mapa físico?
+
+#### Paso 6. Entrega
+La entrega será individual a través de Aules, se entregará el Archivo `.pkt` de Cisco Packet Tracer y un documento, en formato PDF, que deberá contener:
+
+* Captura del **esquema físico**.
+* Captura del **esquema lógico**.
+* Cuestiones finales respondidas.
+* Tabla con todos los dispositivos y sus direcciones IP.
+
+| Dispositivo | Espacio | Red | IP | Máscara |
+| :---------- | :------ | :-- | :- | :------ |
+|             |         |     |    |         |
+|             |         |     |    |         |
+|             |         |     |    |         |
+|             |         |     |    |         |
