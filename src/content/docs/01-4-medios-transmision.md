@@ -38,7 +38,7 @@ Los medios de transmisión pueden clasificarse en dos grandes grupos:
 ### 4. Medios guiados
 Los **medios guiados** utilizan un soporte físico para transportar la información. Las señales permanecen confinadas dentro del cable, lo que proporciona una mayor estabilidad y protección frente a interferencias externas. Son los medios más utilizados en redes empresariales y centros de datos.
 
-### 4.1. Cable de par trenzado
+#### 4.1. Cable de par trenzado
 Es el medio de transmisión más utilizado en las redes Ethernet actuales. Está formado por varios pares de hilos de cobre trenzados entre sí. El trenzado reduce las interferencias electromagnéticas y mejora la calidad de la transmisión. Existen diferentes tipos de cable de par trenzado:
 
 #####   a) UTP (Unshielded Twisted Pair)
@@ -76,7 +76,7 @@ La velocidad máxima depende de la categoría del cable.
 
 >❌ **Inconvenientes:** Distancia limitada (100 metros en Ethernet), sensible a interferencias y menor velocidad que la fibra óptica.
 
-### 4.2. Fibra óptica
+#### 4.2. Fibra óptica
 La fibra óptica transmite la información mediante **impulsos de luz**, en lugar de señales eléctricas. Está formada por un núcleo de vidrio o plástico extremadamente fino por el que viajan los haces de luz. Actualmente constituye el medio de transmisión de mayor capacidad. Existen diferentes tipos de fibra óptica:
 
 #####   a) Fibra multimodo (MMF)
@@ -107,7 +107,7 @@ Es la utilizada por los operadores de telecomunicaciones.
   loading="lazy"
 />
 
-### 4.3. Cable coaxial
+#### 4.3. Cable coaxial
 Fue uno de los primeros medios utilizados en redes locales. Está formado por:
 
 - Un conductor central.
@@ -133,7 +133,7 @@ Actualmente apenas se utiliza en redes Ethernet, aunque sigue presente en:
   loading="lazy"
 />
 
-### 4.4. Comparativa de medios guiados
+#### 4.4. Comparativa de medios guiados
 
 | Medio | Velocidad | Distancia | Coste | Interferencias |
 |--------|----------:|----------:|-------:|---------------|
@@ -199,7 +199,7 @@ Las comunicaciones por satélite permiten ofrecer conectividad en lugares donde 
 
 Su principal inconveniente es la elevada latencia.
 
-### 5.6. Comparativa de medios no guiados
+#### 5.6. Comparativa de medios no guiados
 
 | Medio | Alcance | Movilidad | Velocidad |
 |--------|---------|-----------|-----------|
