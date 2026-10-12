@@ -2,7 +2,7 @@
 title: 🔌 UP3.1. Conexión de conmutadores entre sí y con estaciones de trabajo - CE3.a)
 ---
 
-### RA3. Administra conmutadores estableciendo opciones de configuración para su integración en la red (15 %).
+### RA3. Administra conmutadores estableciendo opciones de configuración para su integración en la red.
 
 | Criterio de evaluación | Tipo | Ponderación |
 |:-----------|:-----:|:-----:|
