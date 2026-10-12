@@ -106,7 +106,23 @@ export default defineConfig({
                 { slug: '02-9-monitorizacion-red', label: 'UP2.9. Monitorización de redes mediante SNMP - CE2.i)' },
               ],
             },
-
+            {
+              label: '🔌 UP3. Configuración y administración de switches',
+              collapsed: true,
+              items: [
+                { slug: '03-switches', label: 'Introducción' },
+                { slug: '03-1-conexion-switches', label: 'UP3.1. Conexión de conmutadores entre sí y con estaciones de trabajo - CE3.a)' },
+                { slug: '03-2-interpretar-switch', label: 'UP3.2. Interpretación de la información proporcionada por los LED del conmutador - CE3.b)' },
+                { slug: '03-3-acceso-switch', label: 'UP3.3. Métodos para acceder al modo de configuración del conmutador - CE3.c)' },
+                { slug: '03-4-guardado-switch', label: 'UP3.4. Archivos que guardan la configuración del conmutador - CE3.d)' },
+                { slug: '03-5-mac-switch', label: 'UP3.5. Administración de la tabla de direcciones MAC del conmutador - CE3.e)' },
+                { slug: '03-6-seguridad-switch', label: 'UP3.6. Configuración de la seguridad del puerto del conmutador - CE3.f)' },
+                { slug: '03-7-so-switch', label: 'UP3.7. Actualización del sistema operativo del conmutador - CE3.g)' },
+                { slug: '03-8-diagnostico-switch', label: 'UP3.8. Comandos de diagnóstico y seguimiento de incidencias en el conmutador - CE3.h)' },
+                { slug: '03-9-stp-switch', label: 'UP3.9. Verificación del funcionamiento del Spanning Tree Protocol (STP) - CE3.i)' },
+                { slug: '03-10-puente-raiz', label: 'UP3.10. Modificación de los parámetros que determinan la selección del puente raíz - CE3.j)' },
+              ],
+            },
           // resto de unidades...
         ],
         },
