@@ -6,7 +6,7 @@ title: 🔌 UP3.8. Comandos de diagnóstico y seguimiento de incidencias en el c
 
 | Criterio de evaluación | Tipo | Ponderación |
 |:-----------|:-----:|:-----:|
-| h) Se han utilizado los comandos proporcionados por el sistema operativo del conmutador que permiten hacer el seguimiento de posibles incidencias. | Práctico |  % | 
+| h) Se han utilizado los comandos proporcionados por el sistema operativo del conmutador que permiten hacer el seguimiento de posibles incidencias. | Práctico | 10 % | 
 
 ### 1. Introducción
 Un conmutador puede presentar diferentes problemas durante su funcionamiento:

@@ -6,7 +6,7 @@ title: 🔌 UP3.4. Archivos que guardan la configuración del conmutador - CE3.d
 
 | Criterio de evaluación | Tipo | Ponderación |
 |:-----------|:-----:|:-----:|
-| d) Se han identificado los archivos que guardan la configuración del conmutador. | Teórico |  % |  
+| d) Se han identificado los archivos que guardan la configuración del conmutador. | Teórico | 10 % |  
 
 ### 1. Introducción
 Un **conmutador gestionable** dispone de diferentes parámetros que determinan su funcionamiento. Por ejemplo:

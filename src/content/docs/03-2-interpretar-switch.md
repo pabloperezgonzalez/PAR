@@ -6,7 +6,7 @@ title: 🔌 UP3.2. Interpretación de la información proporcionada por los LED 
 
 | Criterio de evaluación | Tipo | Ponderación |
 |:-----------|:-----:|:-----:|
-| b) Se ha interpretado la información que proporcionan los «leds» del conmutador | Teórico |  % | 
+| b) Se ha interpretado la información que proporcionan los «leds» del conmutador | Teórico | 5 % | 
 
 ### 1. Introducción
 Los **conmutadores de red (switches)** disponen de diferentes indicadores luminosos o **LED** que permiten conocer rápidamente su estado y el de los puertos de red. Estos indicadores proporcionan información sobre aspectos como:

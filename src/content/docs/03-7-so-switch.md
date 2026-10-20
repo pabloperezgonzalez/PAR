@@ -6,7 +6,7 @@ title: 🔌 UP3.7. Actualización del sistema operativo del conmutador - CE3.g)
 
 | Criterio de evaluación | Tipo | Ponderación |
 |:-----------|:-----:|:-----:|
-| g) Se ha actualizado el sistema operativo del conmutador. | Práctico |  % | 
+| g) Se ha actualizado el sistema operativo del conmutador. | Práctico | 10 % | 
 
 ### 1. Introducción
 Los conmutadores gestionables disponen de un **sistema operativo** que permite controlar y configurar las diferentes funciones del dispositivo. En los equipos Cisco, este sistema operativo se conoce habitualmente como **Cisco IOS (Internetwork Operating System)**. El sistema operativo proporciona:

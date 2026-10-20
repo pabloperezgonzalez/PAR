@@ -6,7 +6,7 @@ title: 🔌 UP3.6. Configuración de la seguridad del puerto del conmutador - CE
 
 | Criterio de evaluación | Tipo | Ponderación |
 |:-----------|:-----:|:-----:|
-| f) Se ha configurado la seguridad del puerto. | Práctico |  % | 
+| f) Se ha configurado la seguridad del puerto. | Práctico | 15 % | 
 
 ### 1. Introducción
 Los puertos de un conmutador permiten conectar diferentes dispositivos de red, como ordenadores, impresoras, teléfonos IP o puntos de acceso inalámbricos. Sin embargo, no siempre queremos que **cualquier dispositivo pueda conectarse a cualquier puerto**. Por ejemplo, en un aula podemos establecer que:

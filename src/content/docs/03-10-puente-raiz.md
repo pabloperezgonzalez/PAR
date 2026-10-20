@@ -6,7 +6,7 @@ title: 🔌 UP3.10. Modificación de los parámetros que determinan la selecció
 
 | Criterio de evaluación | Tipo | Ponderación |
 |:-----------|:-----:|:-----:|
-| j) Se han modificado los parámetros que determinan el proceso de selección del puente raíz. | Práctico |  % | 
+| j) Se han modificado los parámetros que determinan el proceso de selección del puente raíz. | Práctico | 15 % | 
 
 ### 1. Introducción
 En una red con varios conmutadores, **Spanning Tree Protocol (STP)** necesita seleccionar un conmutador que actúe como **puente raíz o Root Bridge**. El Root Bridge sirve como referencia para que los demás switches calculen los mejores caminos dentro de la topología. Por ejemplo:

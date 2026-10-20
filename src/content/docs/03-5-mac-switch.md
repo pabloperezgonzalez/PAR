@@ -6,7 +6,7 @@ title: 🔌 UP3.5. Administración de la tabla de direcciones MAC del conmutador
 
 | Criterio de evaluación | Tipo | Ponderación |
 |:-----------|:-----:|:-----:|
-| e) Se ha administrado la tabla de direcciones MAC del conmutador. | Práctico |  % |
+| e) Se ha administrado la tabla de direcciones MAC del conmutador. | Práctico | 10 % |
 
 ### 1. Introducción
 Una de las funciones fundamentales de un **conmutador (switch)** es aprender qué dispositivos están conectados a cada uno de sus puertos. Para ello, el switch utiliza las **direcciones MAC** de los dispositivos y construye una tabla que relaciona cada dirección MAC con el puerto por el que puede alcanzarse.

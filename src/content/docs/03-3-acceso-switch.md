@@ -6,7 +6,7 @@ title: 🔌 UP3.3. Métodos para acceder al modo de configuración del conmutado
 
 | Criterio de evaluación | Tipo | Ponderación |
 |:-----------|:-----:|:-----:|
-| c) Se han utilizado distintos métodos para acceder al modo de configuración del conmutador. | Teórico |  % | 
+| c) Se han utilizado distintos métodos para acceder al modo de configuración del conmutador. | Teórico | 10 % | 
 
 ### 1. Introducción
 Para administrar un **conmutador de red (switch)** es necesario poder acceder a su sistema de administración y configuración. Los switches gestionables disponen de diferentes mecanismos para realizar esta tarea. Dependiendo del modelo, podemos acceder al dispositivo mediante:

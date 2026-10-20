@@ -6,7 +6,7 @@ title: 🔌 UP3.9. Verificación del funcionamiento del Spanning Tree Protocol (
 
 | Criterio de evaluación | Tipo | Ponderación |
 |:-----------|:-----:|:-----:|
-| i) Se ha verificado el funcionamiento del Spanning Tree Protocol en un conmutador. | Práctico |  % | 
+| i) Se ha verificado el funcionamiento del Spanning Tree Protocol en un conmutador. | Práctico | 10 % | 
 
 ### 1. Introducción
 En una red con varios conmutadores es habitual disponer de **enlaces redundantes** para evitar que una única avería provoque la pérdida de conectividad. Por ejemplo:

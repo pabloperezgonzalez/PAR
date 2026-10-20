@@ -6,7 +6,7 @@ title: 🔌 UP3.1. Conexión de conmutadores entre sí y con estaciones de traba
 
 | Criterio de evaluación | Tipo | Ponderación |
 |:-----------|:-----:|:-----:|
-| a) Se han conectado conmutadores entre sí y con las estaciones de trabajo. | Práctico |  % | 
+| a) Se han conectado conmutadores entre sí y con las estaciones de trabajo. | Práctico | 5 % | 
 
 ### 1. Introducción
 Un **conmutador de red (switch)** es un dispositivo que permite conectar diferentes equipos dentro de una red local (LAN), como ordenadores, servidores, impresoras, puntos de acceso u otros dispositivos de red.
