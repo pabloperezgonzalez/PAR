@@ -32,14 +32,14 @@ Un **LED (Light Emitting Diode)** es un indicador luminoso que muestra informaci
 Por ejemplo:
 
 ```text
-┌─────────────────────────────────────┐
-│              SWITCH                 │
-│                                     │
-│ POWER  🟢                           │
-│                                     │
-│  1 🟢   2 🟢   3 🟠   4 ⚫          │
-│                                     │
-└─────────────────────────────────────┘
+      ┌─────────────────────────────────────┐
+      │              SWITCH                 │
+      │                                     │
+      │ POWER  🟢                        
+      │                                     │
+      │  1 🟢   2 🟢   3 🟠   4 ⚫        │
+      │                                     │
+      └─────────────────────────────────────┘
 ```
 
 Cada indicador debe interpretarse según las instrucciones del fabricante.
@@ -58,10 +58,10 @@ Cada puerto Ethernet puede disponer de uno o varios LED. Estos indicadores permi
 Ejemplo:
 
 ```text
-Puerto 1 → 🟢
-Puerto 2 → 🟢
-Puerto 3 → ⚫
-Puerto 4 → 🟢
+      Puerto 1 → 🟢
+      Puerto 2 → 🟢
+      Puerto 3 → ⚫
+      Puerto 4 → 🟢
 ```
 
 Podríamos interpretar inicialmente que los puertos 1, 2 y 4 tienen un enlace activo, mientras que el puerto 3 no tiene un enlace detectado.
@@ -70,10 +70,10 @@ Podríamos interpretar inicialmente que los puertos 1, 2 y 4 tienen un enlace ac
 El indicador **Link** permite conocer si existe una conexión física entre el puerto del switch y el dispositivo conectado. Por ejemplo:
 
 ```text
-PC ───────────── Switch
-                  │
-                  ▼
-               LINK 🟢
+      PC ───────────── Switch
+                        │
+                        ▼
+                  LINK 🟢
 ```
 
 Si está apagado, debemos comprobar:
@@ -90,10 +90,10 @@ Algunos switches utilizan el mismo LED para indicar también la actividad de la 
 Ejemplo:
 
 ```text
-PC ───────── Switch
-                │
-                ▼
-             🟢 ↔ ⚫
+      PC ───────── Switch
+                  │
+                  ▼
+                  🟢 ↔ ⚫
 ```
 
 El parpadeo indica normalmente que se están transmitiendo o recibiendo datos. Por tanto:
@@ -112,8 +112,8 @@ Enlace + actividad
 Algunos switches disponen de indicadores que permiten conocer la **velocidad negociada** del puerto. Por ejemplo, un switch podría utilizar:
 
 ```text
-🟢 → 1 Gbps
-🟠 → 100 Mbps
+      🟢 → 1 Gbps
+      🟠 → 100 Mbps
 ```
 
 Sin embargo, otro fabricante puede utilizar otros colores o combinaciones. Por este motivo:
@@ -173,9 +173,9 @@ Sin embargo, **estos significados no son universales**.
 Los LED permiten realizar una primera aproximación al diagnóstico de una incidencia. Por ejemplo:
 
 ```text
-PC ─────── Switch
-             │
-             └── LED apagado
+      PC ─────── Switch
+                  │
+                  └── LED apagado
 ```
 
 Antes de utilizar herramientas como `ping`, podemos realizar las siguientes comprobaciones:
@@ -191,8 +191,8 @@ Antes de utilizar herramientas como `ping`, podemos realizar las siguientes comp
 Un ordenador conectado al puerto 5 de un switch no tiene conexión de red. Observamos:
 
 ```text
-POWER → 🟢
-Puerto 5 → ⚫
+      POWER → 🟢
+      Puerto 5 → ⚫
 ```
 
 El switch está encendido, pero no detecta un enlace en el puerto 5. El administrador puede seguir esta secuencia:
@@ -217,14 +217,14 @@ De esta forma se puede localizar progresivamente el origen del problema.
 Los LED son muy útiles, pero proporcionan una información limitada. Por ejemplo, un LED puede indicar:
 
 ```text
-🟢 Enlace activo
+      🟢 Enlace activo
 ```
 
 pero esto **no significa necesariamente que exista conectividad IP**. Podemos tener:
 
 ```text
-PC ─────── Switch
-     🟢
+      PC ─────── Switch
+           🟢
 ```
 
 y, sin embargo, que el equipo tenga una configuración IP incorrecta. Por eso debemos diferenciar:
@@ -258,12 +258,12 @@ Los LED permiten comprobar principalmente aspectos relacionados con la **capa f�
 Supongamos que tenemos:
 
 ```text
-          Switch
+            Switch
 
-Puerto 1 → 🟢 ↔ ⚫
-Puerto 2 → 🟢
-Puerto 3 → ⚫
-Puerto 4 → 🟢 ↔ ⚫
+      Puerto 1 → 🟢 ↔ ⚫
+      Puerto 2 → 🟢
+      Puerto 3 → ⚫
+      Puerto 4 → 🟢 ↔ ⚫
 ```
 
 Una posible interpretación sería:
@@ -291,16 +291,16 @@ Al interpretar los LED de un switch es recomendable:
 Supongamos que tenemos:
 
 ```text
-          Switch
+            Switch
 
-Puerto 1 → 🟢 ↔ ⚫
-Puerto 2 → 🟢
-Puerto 3 → ⚫
-Puerto 4 → 🟢 ↔ ⚫
-Puerto 5 → 🟢 ↔ ⚫
-Puerto 6 → ⚫
-Puerto 7 → 🟢
-Puerto 8 → 🟢
+      Puerto 1 → 🟢 ↔ ⚫
+      Puerto 2 → 🟢
+      Puerto 3 → ⚫
+      Puerto 4 → 🟢 ↔ ⚫
+      Puerto 5 → 🟢 ↔ ⚫
+      Puerto 6 → ⚫
+      Puerto 7 → 🟢
+      Puerto 8 → 🟢
 ```
 
 ¿Qué pasos debemos seguir y qué podemos interpretar de cada puerto del switch?

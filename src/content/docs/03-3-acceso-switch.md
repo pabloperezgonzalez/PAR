@@ -22,17 +22,17 @@ Cada método tiene unas características y unas condiciones de utilización dife
 Un switch gestionable dispone de un sistema operativo que permite consultar y modificar su funcionamiento. Por ejemplo, en un switch Cisco podemos encontrar diferentes modos de trabajo:
 
 ```text
-Modo usuario
-     │
-     ▼
-Modo privilegiado
-     │
-     ▼
-Modo de configuración global
-     │
-     ├── Configuración de interfaces
-     ├── Configuración de VLAN
-     └── Configuración de otros parámetros
+     Modo usuario
+          │
+          ▼
+     Modo privilegiado
+          │
+          ▼
+     Modo de configuración global
+          │
+          ├── Configuración de interfaces
+          ├── Configuración de VLAN
+          └── Configuración de otros parámetros
 ```
 
 Para realizar determinadas tareas administrativas es necesario acceder al **modo de configuración**.
@@ -41,18 +41,18 @@ Para realizar determinadas tareas administrativas es necesario acceder al **modo
 La **consola** es uno de los métodos fundamentales para administrar un switch. Permite acceder directamente al dispositivo mediante una conexión física, normalmente utilizando un **cable de consola** conectado entre un ordenador y el puerto de consola del switch.
 
 ```text
-┌──────────────┐
-│ Ordenador    │
-│              │
-└──────┬───────┘
-       │
-       │ Cable de consola
-       │
-┌──────────────┐
-│    Switch    │
-│              │
-│   CONSOLE    │
-└──────────────┘
+     ┌──────────────┐
+     │   Ordenador  │
+     │              │
+     └──────┬───────┘
+            │
+            │ Cable de consola
+            │
+     ┌──────────────┐
+     │    Switch    │
+     │              │
+     │   CONSOLE    │
+     └──────────────┘
 ```
 
 Este método es especialmente importante durante la **configuración inicial** del dispositivo.
@@ -82,17 +82,17 @@ En sistemas Windows es habitual utilizar **PuTTY**.
 **SSH (Secure Shell)** permite administrar el switch de forma remota mediante una conexión segura. Para utilizar SSH, el switch debe estar previamente configurado con los parámetros necesarios, entre ellos una dirección IP de administración.
 
 ```text
-┌──────────────┐
-│ Administrador│
-│     PC       │
-└──────┬───────┘
-       │
-       │ SSH
-       │
-┌──────────────┐
-│    Switch    │
-│ 192.168.1.2  │
-└──────────────┘
+     ┌──────────────┐
+     │ Administrador│
+     │     PC       │
+     └──────┬───────┘
+            │
+            │ SSH
+            │
+     ┌──────────────┐
+     │    Switch    │
+     │ 192.168.1.2  │
+     └──────────────┘
 ```
 
 El administrador puede conectarse desde otro equipo de la red sin necesidad de estar físicamente junto al switch.
@@ -115,11 +115,11 @@ ssh admin@192.168.1.2
 **Telnet** también permite administrar remotamente un switch. El funcionamiento general es similar al de SSH:
 
 ```text
-Administrador
-      │
-      │ Telnet
-      │
-    Switch
+     Administrador
+          │
+          │ Telnet
+          │
+       Switch
 ```
 
 Sin embargo, Telnet presenta un problema importante: **La comunicación no está cifrada**. Las credenciales y la información intercambiada pueden viajar por la red sin protección. Por este motivo, **Telnet no se recomienda en redes reales** cuando existe la posibilidad de utilizar SSH.
@@ -138,24 +138,24 @@ Sin embargo, Telnet presenta un problema importante: **La comunicación no está
 Algunos switches gestionables disponen de una **interfaz web** que permite administrarlos mediante un navegador.
 
 ```text
-┌──────────────┐
-│ Ordenador    │
-│ Navegador    │
-└──────┬───────┘
-       │
-       │ HTTP/HTTPS
-       │
-       │
-┌──────────────┐
-│    Switch    │
-│ 192.168.1.2  │
-└──────────────┘
+     ┌──────────────┐
+     │ Ordenador    │
+     │ Navegador    │
+     └──────┬───────┘
+            │
+            │ HTTP/HTTPS
+            │
+            │
+     ┌──────────────┐
+     │    Switch    │
+     │ 192.168.1.2  │
+     └──────────────┘
 ```
 
 El administrador introduce la dirección IP del switch en el navegador y accede a la interfaz de administración. Por ejemplo:
 
 ```text
-https://192.168.1.2
+     https://192.168.1.2
 ```
 
 La interfaz puede permitir configurar:

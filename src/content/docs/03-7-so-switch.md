@@ -225,19 +225,19 @@ Comprobar funcionamiento
 La nueva imagen debe transferirse al switch. Dependiendo del modelo y del entorno, pueden utilizarse diferentes mecanismos de transferencia. Uno de los más habituales en dispositivos Cisco es **TFTP**. De forma simplificada:
 
 ```text
-┌───────────────┐
-│ Servidor TFTP │
-│               │
-│ Nueva imagen  │
-└───────┬───────┘
-        │
-        │ Red
-        ▼
-┌───────────────┐
-│    Switch     │
-│               │
-│    FLASH      │
-└───────────────┘
+        ┌───────────────┐
+        │ Servidor TFTP │
+        │               │
+        │ Nueva imagen  │
+        └───────┬───────┘
+                │
+                │ Red
+                ▼
+        ┌───────────────┐
+        │    Switch     │
+        │               │
+        │    FLASH      │
+        └───────────────┘
 ```
 
 El objetivo es copiar la nueva imagen al almacenamiento del switch.
