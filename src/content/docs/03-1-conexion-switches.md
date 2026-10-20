@@ -17,15 +17,15 @@ Una de las primeras tareas que debe conocer un administrador de redes es la **co
 Un **conmutador o switch** es un dispositivo de red que trabaja principalmente en la **capa 2 del modelo OSI**. Su función principal es recibir tramas Ethernet y enviarlas por el puerto correspondiente basándose en las **direcciones MAC** de los dispositivos. Por ejemplo:
 
 ```text
-        PC1
-         │
-         │
-      ┌───────┐
-      │ Switch│
-      └───────┘
-         │
-         │
-        PC2
+         PC1
+          │
+          │
+      ┌────────┐
+      │ Switch │
+      └────────┘
+          │
+          │
+         PC2
 ```
 
 El switch permite que PC1 y PC2 puedan comunicarse dentro de la misma red local.
@@ -44,18 +44,18 @@ Los puertos pueden utilizar conectores **RJ-45** cuando se emplea cable de cobre
 Una estación de trabajo, como un ordenador, se conecta normalmente a uno de los puertos Ethernet del switch mediante un cable de red.
 
 ```text
-┌─────────────┐
-│ Ordenador   │
-│   PC1       │
-└──────┬──────┘
-       │
-       │ Cable Ethernet
-       │
-┌───────────────┐
-│    SWITCH     │
-│               │
-│  [1][2][3][4]│
-└───────────────┘
+       ┌─────────────┐
+       │  Ordenador  │
+       │     PC1     │
+       └──────┬──────┘
+              │
+              │ Cable Ethernet
+              │
+       ┌───────────────┐
+       │    SWITCH     │
+       │               │
+       │ [1][2][3][4]  │
+       └───────────────┘
 ```
 
 El procedimiento básico es:
@@ -70,9 +70,9 @@ El procedimiento básico es:
 En las instalaciones actuales se utiliza habitualmente **cable Ethernet de par trenzado** con conectores RJ-45. El cable más habitual es el **cable directo**.
 
 ```text
-PC ───────────── Switch
-       Cable
-       Ethernet
+       PC ───────────── Switch
+              Cable
+              Ethernet
 ```
 
 Los dispositivos modernos suelen incorporar **Auto-MDI/MDIX**, por lo que pueden detectar automáticamente cómo deben utilizarse los pares de transmisión y recepción. Por este motivo, actualmente no es necesario seleccionar normalmente un cable cruzado para conectar dispositivos del mismo tipo.
@@ -123,10 +123,10 @@ En una red real podemos encontrar una estructura similar a:
              ┌────────┼────────┐
              │        │        │
             PC1      PC2    Switch 2
-                              │
-                       ┌──────┼──────┐
-                       │      │      │
-                      PC3    PC4    PC5
+                               │
+                        ┌──────┼──────┐
+                        │      │      │
+                       PC3    PC4    PC5
 ```
 
 El **Switch 1** actúa como punto de conexión con el router y con el **Switch 2**. El Switch 2 permite ampliar el número de dispositivos conectados a la red.
@@ -135,13 +135,13 @@ El **Switch 1** actúa como punto de conexión con el router y con el **Switch 2
 El enlace entre dos switches se denomina habitualmente **enlace entre conmutadores** o *switch-to-switch link*.
 
 ```text
-Switch 1
-   │
-   │
-   │ Enlace Ethernet
-   │
-   ▼
-Switch 2
+       Switch 1
+         │
+         │
+         │ Enlace Ethernet
+         │
+         ▼
+       Switch 2
 ```
 
 Este enlace debe tener una capacidad suficiente para transportar el tráfico generado por los dispositivos conectados al segundo switch. Por ejemplo, si varios ordenadores están conectados al Switch 2, todo su tráfico que deba pasar por el Switch 1 utilizará el enlace entre ambos.
@@ -150,13 +150,13 @@ Este enlace debe tener una capacidad suficiente para transportar el tráfico gen
 Es importante comprobar la velocidad soportada por los puertos. Por ejemplo:
 
 ```text
-PC ──── 1 Gbps ──── Switch
+       PC ──── 1 Gbps ──── Switch
 ```
 
 o:
 
 ```text
-Switch 1 ──── 1 Gbps ──── Switch 2
+       Switch 1 ──── 1 Gbps ──── Switch 2
 ```
 
 Una conexión puede funcionar correctamente aunque los dispositivos negocien una velocidad inferior a la esperada. Por ello, el administrador debe comprobar tanto la **conectividad** como la **velocidad negociada**.
@@ -167,19 +167,19 @@ Una conexión física correcta no garantiza que exista comunicación entre los d
 Por ejemplo:
 
 ```text
-PC1
-IP:      192.168.1.10
-Máscara: 255.255.255.0
+       PC1
+       IP:      192.168.1.10
+       Máscara: 255.255.255.0
 
-PC2
-IP:      192.168.1.20
-Máscara: 255.255.255.0
+       PC2
+       IP:      192.168.1.20
+       Máscara: 255.255.255.0
 ```
 
 Ambos equipos pertenecen a la misma red:
 
 ```text
-192.168.1.0/24
+       192.168.1.0/24
 ```
 
 Por tanto, deberían poder comunicarse directamente a través del switch.
@@ -188,14 +188,14 @@ Por tanto, deberían poder comunicarse directamente a través del switch.
 Una de las primeras pruebas que podemos realizar es utilizar el comando `ping`. Desde PC1:
 
 ```bash
-ping 192.168.1.20
+       ping 192.168.1.20
 ```
 
 Si recibimos respuestas, existe conectividad entre ambos equipos.
 
 ```text
-Respuesta desde 192.168.1.20
-Tiempo < 1 ms
+       Respuesta desde 192.168.1.20
+       Tiempo < 1 ms
 ```
 
 Si no recibimos respuesta, será necesario investigar la causa.
@@ -236,19 +236,19 @@ Hace referencia a la configuración que permite la comunicación:
 Podemos tener una conexión física correcta pero una configuración lógica incorrecta.
 
 ```text
-Cable conectado
-      │
-      ▼
-LED encendido
-      │
-      ▼
-Configuración IP correcta
-      │
-      ▼
-Ping correcto
-      │
-      ▼
-Comunicación
+       Cable conectado
+          │
+          ▼
+       LED encendido
+          │
+          ▼
+       Configuración IP correcta
+          │
+          ▼
+       Ping correcto
+          │
+          ▼
+       Comunicación
 ```
 
 ### 15. Buenas prácticas
@@ -267,3 +267,61 @@ Al conectar switches y estaciones de trabajo es recomendable:
 En instalaciones profesionales, la **documentación y el etiquetado** son tan importantes como realizar correctamente la conexión.
 
 ### 16. Actividad UP3.1. Conexión de conmutadores entre sí y con estaciones de trabajo - CE3.a)
+#### Paso 1. Dispositivos necesarios
+Utilizando **Cisco Packet Tracer**, construye una topología con dos switches, dos estaciones de trabajo y dos portátiles, conectando correctamente todos los dispositivos:
+
+| Dispositivo | Cantidad | Nombre |
+|---|---:|---|
+| Switch Cisco 2960 | 2 | SW-01 y SW-02 |
+| PC de sobremesa | 2 | PC01-NombreApellido y PC02-NombreApellido |
+| Portátil | 2 | LAP01-NombreApellido y LAP02-NombreApellido |
+
+**Importante:** sustituye `NombreApellido` por tu nombre y primer apellido, sin espacios ni tildes.
+
+#### Paso 2. Construcción de la topología
+Organiza los dispositivos de la siguiente manera:
+
+```text
+ PC01-NombreApellido     PC02-NombreApellido
+          \                    /
+           \                  /
+            ┌──────────────┐
+            │    SW-01     │
+            └──────┬───────┘
+                   │
+                   │
+            ┌──────┴───────┐
+            │    SW-02     │
+            └──────────────┘
+              /          \
+             /            \
+LAP01-NombreApellido   LAP02-NombreApellido
+```
+
+Realiza las siguientes acciones:
+
+1. Coloca los dos switches, los dos PCs y los dos portátiles en el área de trabajo.
+2. Cambia el nombre de cada dispositivo siguiendo el formato indicado.
+3. Conecta `PC01-NombreApellido` al `SW-01` mediante un cable Ethernet de cobre directo.
+4. Conecta `PC02-NombreApellido` al `SW-01` mediante un cable Ethernet de cobre directo.
+5. Conecta `LAP01-NombreApellido` al `SW-02` mediante un cable Ethernet de cobre directo.
+6. Conecta `LAP02-NombreApellido` al `SW-02` mediante un cable Ethernet de cobre directo.
+7. Conecta el `SW-01` al `SW-02` mediante un cable Ethernet de cobre directo.
+8. Utiliza puertos Ethernet disponibles y comprueba visualmente que cada cable está conectado a la interfaz correspondiente.
+
+En esta actividad, los portátiles también se conectarán por cable Ethernet. No es necesario configurar conexiones inalámbricas.
+
+#### Paso 3. Comprobación de las conexiones
+Revisa el escenario y asegúrate de que:
+
+- Los seis dispositivos están colocados y correctamente nombrados.
+- Las dos estaciones de trabajo están conectadas al `SW-01`.
+- Los dos portátiles están conectados al `SW-02`.
+- Los dos switches están conectados entre sí.
+- Los cables están conectados a interfaces Ethernet adecuadas.
+- No hay dispositivos sin conectar por error.
+
+**No configures direcciones IP, no accedas a la CLI y no realices pruebas de conectividad.** Estos aspectos se trabajarán en otros criterios de evaluación.
+
+#### Paso 4. Entrega
+La entrega será individual, en formato PDF y se realizará a través de Aules. El documento debe contener todas las capturas de pantalla necesarias para demostrar que se ha realizado el procedimiento correctamente.

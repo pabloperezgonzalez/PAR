@@ -297,3 +297,106 @@ clear mac address-table dynamic
 ```
 
 ### 19. Actividad UP3.5. Administración de la tabla de direcciones MAC del conmutador - CE3.e)
+A partir de la topología creada en la actividad del criterio CE3.a), utiliza Cisco Packet Tracer para analizar cómo los switches aprenden las direcciones MAC de los dispositivos conectados. Genera tráfico en la red, consulta las tablas MAC de ambos switches e identifica por qué puerto se localiza cada dispositivo.
+
+#### Paso 1. Recuperar el escenario
+Abre el archivo de Packet Tracer de la actividad anterior. La topología debe contener:
+
+- Dos switches Cisco 2960: `SW-01` y `SW-02`.
+- Dos estaciones de trabajo: `PC01-NombreApellido` y `PC02-NombreApellido`.
+- Dos portátiles: `LAP01-NombreApellido` y `LAP02-NombreApellido`.
+
+Comprueba que se mantienen las conexiones físicas:
+
+- Los dos PCs están conectados a `SW-01`.
+- Los dos portátiles están conectados a `SW-02`.
+- Los switches están conectados entre sí.
+
+No modifiques el cableado.
+
+#### Paso 2. Identificar las direcciones MAC
+En cada PC y portátil, accede a: **Desktop → Command Prompt**. Ejecuta:
+
+```text
+ipconfig /all
+```
+
+Anota la dirección física o MAC de cada dispositivo y completa la tabla:
+
+| Dispositivo | Dirección MAC | Switch al que está conectado |
+|---|---|---|
+| PC01-NombreApellido | | SW-01 |
+| PC02-NombreApellido | | SW-01 |
+| LAP01-NombreApellido | | SW-02 |
+| LAP02-NombreApellido | | SW-02 |
+
+#### Paso 3. Consultar la tabla MAC inicial
+Accede a la CLI de `SW-01` y ejecuta:
+
+```text
+enable
+show mac address-table
+```
+
+Repite la operación en `SW-02`. Registra las direcciones MAC que aparecen en cada switch. Es posible que las tablas estén vacías o que todavía no contengan todas las direcciones de los dispositivos finales. Guarda una captura de pantalla de cada tabla.
+
+#### Paso 4. Generar tráfico en la red
+Para que los switches aprendan las direcciones MAC, genera tráfico desde los dispositivos. En `PC01-NombreApellido`, abre **Desktop → Command Prompt** y ejecuta:
+
+```text
+ping DIRECCION_IP_DESTINO
+```
+
+Como todavía no se han configurado las direcciones IP en esta secuencia de actividades, utiliza temporalmente el modo **Simulation** de Packet Tracer para generar tráfico entre dispositivos, o configura únicamente las direcciones IP necesarias para las pruebas de esta actividad. Para mantener la práctica sencilla, puedes asignar estas direcciones temporales:
+
+| Dispositivo | Dirección IP | Máscara |
+|---|---|---|
+| PC01-NombreApellido | `192.168.10.10` | `255.255.255.0` |
+| PC02-NombreApellido | `192.168.10.11` | `255.255.255.0` |
+| LAP01-NombreApellido | `192.168.20.10` | `255.255.255.0` |
+| LAP02-NombreApellido | `192.168.20.11` | `255.255.255.0` |
+
+Configura las direcciones desde **Desktop → IP Configuration**. Realiza un `ping` entre los dos PCs y otro entre los dos portátiles. No es necesario que exista comunicación entre los dispositivos conectados a switches distintos.
+
+#### Paso 5. Volver a consultar las tablas MAC
+Vuelve a las CLI de ambos switches y ejecuta:
+
+```text
+show mac address-table
+```
+
+Completa las siguientes tablas con las entradas que aparezcan.
+##### Tabla de SW-01
+
+| Dirección MAC | VLAN | Tipo de entrada | Puerto |
+|---|---|---|---|
+| | | | |
+| | | | |
+| | | | |
+
+##### Tabla de SW-02
+
+| Dirección MAC | VLAN | Tipo de entrada | Puerto |
+|---|---|---|---|
+| | | | |
+| | | | |
+| | | | |
+
+Identifica qué entradas corresponden a los dispositivos finales y cuál corresponde al enlace entre los switches, si aparece.
+
+#### Paso 6. Interpretar los resultados
+Responde a las siguientes preguntas:
+
+1. ¿Qué información almacena la tabla MAC de un switch?
+2. ¿Qué relación existe entre una dirección MAC y un puerto?
+3. ¿Por qué aparecen las direcciones MAC de los PCs en `SW-01`?
+4. ¿Por qué un switch puede aprender direcciones MAC de dispositivos conectados a otro switch?
+5. ¿Qué ocurre con las entradas de la tabla MAC si un dispositivo deja de transmitir durante un tiempo?
+6. ¿Por qué es importante esta tabla para el funcionamiento de un switch?
+
+#### Paso 7. Entrega
+La entrega será individual, en formato PDF y se realizará a través de Aules. El documento debe contener todas las capturas de pantalla necesarias para demostrar que se ha realizado el procedimiento correctamente. Recordad incluir:
+
+- La tabla con las direcciones MAC de los cuatro dispositivos.
+- Las tablas MAC de ambos switches.
+- Las respuestas a las preguntas de interpretación.
