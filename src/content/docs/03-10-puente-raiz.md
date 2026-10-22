@@ -314,3 +314,164 @@ Switch(config-vlan)# priority 24576
 La sintaxis exacta puede variar según el modelo, el sistema operativo y el modo de STP utilizado. Por ello, en una práctica real siempre debemos comprobar la documentación y la sintaxis disponible en el dispositivo.
 
 ### 12. Actividad UP3.10. Modificación de los parámetros que determinan la selección del puente raíz - CE3.j)
+Partiendo de la topología de tres switches desarrollada en la actividad del criterio CE3.i), modifica los parámetros de prioridad de STP para controlar qué switch se convierte en Root Bridge. Comprueba los cambios en la topología, identifica los puertos afectados y verifica que la red continúa funcionando correctamente. El objetivo es comprender cómo se puede controlar la elección del switch raíz en una red con enlaces redundantes.
+
+#### Paso 1. Recuperar el escenario anterior
+Abre el archivo de la actividad anterior finalizada. Conserva todos los elementos de la actividad anterior:
+
+- Los switches `SW-01`, `SW-02` y `SW-03`.
+- Los dos PCs y los dos portátiles.
+- El servidor TFTP, si forma parte de tu escenario.
+- Los enlaces entre los switches formando un triángulo.
+- Las direcciones IP y la configuración de seguridad de puertos.
+- La configuración STP existente.
+
+Comprueba que los tres switches están conectados y que STP funciona correctamente.
+
+#### Paso 2. Analizar la elección actual del Root Bridge
+Accede a la CLI de cada switch y ejecuta:
+
+```text
+enable
+show spanning-tree vlan 1
+```
+
+Anota los datos que aparecen en `Root ID` y `Bridge ID`. Completa la tabla:
+
+| Switch | Prioridad actual | Dirección MAC del Bridge ID | ¿Es Root Bridge? |
+|---|---:|---|:---:|
+| SW-01 | | | |
+| SW-02 | | | |
+| SW-03 | | | |
+
+Responde:
+1. ¿Qué switch es actualmente el Root Bridge?
+2. ¿Qué prioridad tiene?
+3. Si todos los switches tienen la misma prioridad, ¿qué otro dato interviene en la elección?
+4. ¿Por qué no conviene dejar la elección del Root Bridge al azar en una red empresarial?
+
+#### Paso 3. Comprender el parámetro de prioridad
+STP utiliza el Bridge ID para elegir el switch raíz. Este identificador incluye la prioridad y la dirección MAC del switch, junto con la información de extensión de sistema que corresponda. En los switches Cisco compatibles, la prioridad de STP se configura en la interfaz de configuración global mediante el comando `spanning-tree vlan`. Para VLAN 1, una configuración habitual es:
+
+```text
+configure terminal
+spanning-tree vlan 1 priority 4096
+end
+```
+
+La prioridad STP tradicional utiliza valores en incrementos de 4096, desde 0 hasta 61440. **Cuanto menor es la prioridad, mayor es la preferencia para convertirse en Root Bridge.** También puede utilizarse el comando de conveniencia `spanning-tree vlan 1 root primary` en equipos compatibles, pero en esta actividad se utilizará la prioridad explícita para comprender el parámetro que controla la elección.
+
+#### Paso 4. Convertir SW-02 en Root Bridge
+Configura `SW-02` para que tenga una prioridad inferior a la de los otros switches. En la CLI de `SW-02`, ejecuta:
+
+```text
+enable
+configure terminal
+spanning-tree vlan 1 priority 4096
+end
+```
+
+Comprueba el resultado:
+
+```text
+show spanning-tree vlan 1
+```
+
+A continuación, ejecuta el mismo comando en `SW-01` y `SW-03` para verificar el Root ID. Completa:
+
+| Switch | Prioridad configurada | ¿Es Root Bridge? |
+|---|---:|:---:|
+| SW-01 | | |
+| SW-02 | 4096 | |
+| SW-03 | | |
+
+Responde:
+1. ¿Se ha convertido `SW-02` en Root Bridge?
+2. ¿Cómo puedes comprobarlo en la salida del comando?
+3. ¿Qué cambios observas en los roles de los puertos de los otros switches?
+
+#### Paso 5. Convertir SW-03 en Root Bridge
+Ahora modifica la prioridad para que `SW-03` tenga preferencia sobre los demás. En la CLI de `SW-03`, ejecuta:
+
+```text
+enable
+configure terminal
+spanning-tree vlan 1 priority 0
+end
+```
+
+Consulta el estado STP en los tres switches:
+
+```text
+show spanning-tree vlan 1
+```
+
+Comprueba si `SW-03` se ha convertido en el nuevo Root Bridge. Completa:
+
+| Switch | Prioridad configurada | ¿Es Root Bridge? |
+|---|---:|:---:|
+| SW-01 | | |
+| SW-02 | 4096 | |
+| SW-03 | 0 | |
+
+Responde:
+1. ¿Qué switch es ahora el Root Bridge?
+2. ¿Por qué la prioridad 0 tiene preferencia sobre la prioridad 4096?
+3. ¿Qué cambios se han producido en los Root Ports y en los puertos designados?
+4. ¿Ha cambiado la topología física o únicamente la lógica?
+
+#### Paso 6. Analizar los cambios en STP
+En los tres switches, ejecuta:
+
+```text
+show spanning-tree vlan 1
+```
+
+Compara los resultados obtenidos cuando `SW-02` era el Root Bridge y cuando lo era `SW-03`. Registra los cambios:
+
+| Elemento | Root Bridge SW-02 | Root Bridge SW-03 |
+|---|---|---|
+| Switch raíz | | |
+| Root Port de SW-01 | | |
+| Root Port de SW-02 | | |
+| Root Port de SW-03 | | |
+| Puerto alternativo o bloqueado | | |
+| Enlace que no reenvía tráfico de usuario | | |
+
+Los puertos concretos que desempeñan cada función dependen de las conexiones utilizadas, los costes de los enlaces y los identificadores de los puertos. Debes anotar los resultados reales de tu simulación. Explica por qué STP puede cambiar los roles y estados de los puertos al cambiar el Root Bridge, aunque los cables permanezcan en la misma posición.
+
+#### Paso 7. Verificar la conectividad
+Con `SW-03` como Root Bridge:
+
+1. Comprueba que los enlaces entre switches han terminado de converger.
+2. Realiza un `ping` entre `PC01` y `PC02`.
+3. Realiza un `ping` entre `LAP01` y `LAP02`.
+4. Si el servidor TFTP forma parte de la red y está correctamente configurado, comprueba también su conectividad desde un equipo de la misma subred.
+5. Consulta de nuevo `show spanning-tree vlan 1`.
+
+Anota los resultados de las pruebas.
+| Prueba | Resultado | Evidencia |
+|---|---|---|
+| Ping PC01 → PC02 | | |
+| Ping LAP01 → LAP02 | | |
+| Ping a SRV-TFTP, si procede | | |
+| STP estable en los tres switches | | |
+
+Explica por qué la red debe seguir evitando bucles y manteniendo la conectividad después de cambiar el Root Bridge.
+
+#### Paso 8. Guardar la configuración y preparar la entrega
+Guarda la configuración de los switches:
+
+```text
+copy running-config startup-config
+```
+
+Ejecuta el comando en cada switch al que hayas modificado la prioridad.
+
+#### Paso 9. Entrega
+La entrega será individual, en formato PDF y se realizará a través de Aules. El documento debe contener todas las capturas de pantalla necesarias para demostrar que se ha realizado el procedimiento correctamente. Recordad incluir:
+- Tabla comparativa de prioridades y Root Bridge.
+- Tabla con los roles y estados de los puertos antes y después de los cambios.
+- Capturas de `show spanning-tree vlan 1` de los tres switches.
+- Evidencias de las pruebas de conectividad.
+- Breve conclusión explicando cómo se controla la elección del Root Bridge.

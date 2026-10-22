@@ -360,3 +360,151 @@ Por tanto:
 > **Port Security debe entenderse como una medida de control de acceso a nivel de puerto, no como un sistema de seguridad completo.**
 
 ### 11. Actividad UP3.6. Configuración de la seguridad del puerto del conmutador - CE3.f)
+Partiendo de la red creada en la actividad del criterio CE3.e), configura la seguridad de los puertos de `SW-01` para permitir únicamente las direcciones MAC autorizadas. Comprueba el funcionamiento de la seguridad conectando los dispositivos previstos y analiza qué sucede cuando se conecta un dispositivo no autorizado.
+
+#### Paso 1. Recuperar el escenario anterior
+Abre el archivo de la actividad anterior finalizada. La topología debe conservar los siguientes dispositivos:
+- `SW-01` y `SW-02`.
+- `PC01-NombreApellido` y `PC02-NombreApellido`.
+- `LAP01-NombreApellido` y `LAP02-NombreApellido`.
+
+Mantén las conexiones y las direcciones IP de la actividad anterior:
+
+| Dispositivo | Dirección IP | Máscara |
+|---|---|---|
+| PC01-NombreApellido | `192.168.10.10` | `255.255.255.0` |
+| PC02-NombreApellido | `192.168.10.11` | `255.255.255.0` |
+| LAP01-NombreApellido | `192.168.20.10` | `255.255.255.0` |
+| LAP02-NombreApellido | `192.168.20.11` | `255.255.255.0` |
+
+Antes de continuar, comprueba que puedes consultar la tabla MAC de los switches mediante:
+
+```text
+enable
+show mac address-table
+```
+
+#### Paso 2. Identificar los puertos que se van a proteger
+En `SW-01`, ejecuta:
+
+```text
+show interfaces status
+```
+
+Identifica los puertos a los que están conectados los dos PCs. Completa la tabla:
+
+| Dispositivo conectado | Puerto de SW-01 | Dirección MAC autorizada |
+|---|---|---|
+| PC01-NombreApellido | | |
+| PC02-NombreApellido | | |
+
+Puedes consultar la dirección MAC de cada PC desde **Desktop → Command Prompt**, utilizando `ipconfig /all` si está disponible, o desde la información de su interfaz de red.
+
+#### Paso 3. Configurar Port Security
+Configura la seguridad en los dos puertos de acceso de `SW-01`. En este ejemplo se utilizan `FastEthernet0/1` y `FastEthernet0/2`; si tus PCs están conectados a otros puertos, sustituye los identificadores. Entra en la CLI de `SW-01` y ejecuta:
+
+```text
+enable
+configure terminal
+
+interface fastEthernet 0/1
+switchport mode access
+switchport port-security
+switchport port-security maximum 1
+switchport port-security mac-address sticky
+exit
+
+interface fastEthernet 0/2
+switchport mode access
+switchport port-security
+switchport port-security maximum 1
+switchport port-security mac-address sticky
+exit
+
+end
+```
+
+Con esta configuración:
+- Los puertos funcionan en modo de acceso.
+- Cada puerto puede admitir una única dirección MAC segura.
+- La opción `sticky` permite aprender automáticamente la dirección MAC del dispositivo conectado y añadirla a la configuración activa como dirección segura.
+
+**Importante:** la dirección MAC aprendida mediante `sticky` no queda guardada en la configuración de inicio hasta que guardes la configuración del switch.
+
+#### Paso 4. Comprobar la configuración
+Ejecuta:
+
+```text
+show port-security
+show port-security interface fastEthernet 0/1
+show port-security interface fastEthernet 0/2
+```
+
+Comprueba si la seguridad está habilitada y si se ha aprendido una dirección MAC segura en cada puerto. Completa la tabla:
+
+| Puerto | Port Security activo | MAC segura aprendida | Máximo de MAC |
+|---|:---:|---|---:|
+| Fa0/1 | | | |
+| Fa0/2 | | | |
+
+Si todavía no se ha aprendido ninguna dirección MAC, genera tráfico desde los PCs autorizados y vuelve a consultar el estado.
+
+#### Paso 5. Probar el funcionamiento de la seguridad
+Realiza las siguientes comprobaciones:
+
+1. Desde `PC01-NombreApellido`, realiza un `ping` a `PC02-NombreApellido`.
+2. Comprueba que los PCs continúan comunicándose.
+3. Consulta de nuevo el estado de seguridad de los puertos.
+4. Guarda una captura de los resultados.
+
+En esta primera prueba, los dispositivos autorizados deben poder utilizar la red con normalidad.
+
+#### Paso 6. Simular la conexión de un dispositivo no autorizado
+En esta prueba se simulará un intento de utilizar un puerto protegido con una dirección MAC diferente.
+
+1. Guarda una copia del archivo antes de hacer la prueba.
+2. Desconecta `PC01-NombreApellido` de `SW-01`.
+3. Conecta temporalmente `LAP01-NombreApellido` al puerto de `SW-01` que estaba utilizando el PC.
+4. Espera a que Packet Tracer actualice el estado de la interfaz y genera tráfico desde el portátil si es necesario.
+5. Consulta el estado de seguridad:
+
+```text
+show port-security interface fastEthernet 0/1
+```
+
+6. Comprueba si se registra una infracción de seguridad y qué sucede con el puerto.
+
+**Nota:** el comportamiento exacto puede variar según el modelo simulado y la versión de Packet Tracer. Si el cambio de dispositivo no genera una infracción, revisa que la dirección MAC original se haya aprendido como segura y que el puerto siga configurado con Port Security.
+
+#### Paso 7. Interpretar los resultados
+Responde a las siguientes preguntas:
+
+1. ¿Qué objetivo tiene Port Security?
+2. ¿Qué significa limitar a una el número máximo de direcciones MAC?
+3. ¿Qué función tiene la opción `sticky`?
+4. ¿Qué diferencia hay entre una dirección MAC aprendida dinámicamente y una dirección MAC segura?
+5. ¿Qué ha ocurrido al conectar el dispositivo no autorizado?
+6. ¿Qué ventajas tiene aplicar esta medida en una red empresarial?
+
+#### Paso 8. Guardar la configuración
+Una vez terminadas las pruebas, restaura las conexiones originales y guarda la configuración de `SW-01`:
+
+```text
+copy running-config startup-config
+```
+
+Comprueba la configuración activa:
+
+```text
+show running-config
+```
+
+Si quieres conservar la práctica en su estado final, deja conectados los dos PCs a `SW-01` y los dos portátiles a `SW-02`.
+
+#### Paso 9. Entrega
+La entrega será individual, en formato PDF y se realizará a través de Aules. El documento debe contener todas las capturas de pantalla necesarias para demostrar que se ha realizado el procedimiento correctamente. Recordad incluir:
+
+- Tabla de puertos protegidos y direcciones MAC seguras.
+- Capturas de los comandos de comprobación.
+- Evidencias de la prueba con el dispositivo no autorizado.
+- Respuestas a las preguntas finales.

@@ -529,3 +529,150 @@ El enlace entre Switch2 y Switch3 está bloqueado. Si falla el enlace entre Swit
 STP puede modificar la topología y permitir que el enlace que estaba bloqueado pase a utilizarse. De esta forma se recupera la conectividad.
 
 ### 9. Actividad UP3.9. Verificación del funcionamiento del Spanning Tree Protocol (STP) - CE3.i)
+Partiendo de la red de la actividad del criterio C3.h), amplía la topología incorporando un tercer switch y conexiones redundantes. Utiliza Cisco Packet Tracer para comprobar cómo STP evita los bucles de capa 2, identificar el switch raíz y verificar qué puertos reenvían tráfico y cuáles quedan bloqueados.
+
+#### Paso 1. Recuperar el escenario anterior
+Abre el archivo de la actividad anterior finalizada. Conserva:
+- `SW-01` y `SW-02`.
+- Los dos PCs y los dos portátiles con sus nombres.
+- Las direcciones IP configuradas.
+- La configuración de seguridad de puertos de `SW-01`.
+- El servidor TFTP, si forma parte de tu escenario.
+
+Antes de continuar, comprueba que los dispositivos finales están conectados a sus switches y que la red funciona correctamente.
+
+#### Paso 2. Ampliar la topología
+Añade un tercer switch Cisco 2960 y llámalo `SW-03`. Conecta los tres switches formando un triángulo:
+
+```text
+                 ┌────────┐
+                 │ SW-01  │
+                 └───┬────┘
+                    / \
+                   /   \
+                  /     \
+          ┌───────┐───────┐
+          │ SW-02 │       │
+          └───┬───┘       │
+              │        ┌──┴───┐
+              └────────│ SW-03│
+                       └──────┘
+```
+
+Conecta los switches mediante enlaces Ethernet. Cada enlace entre dos switches debe utilizar puertos distintos. La topología debe tener tres enlaces entre switches:
+- `SW-01` ↔ `SW-02`
+- `SW-02` ↔ `SW-03`
+- `SW-03` ↔ `SW-01`
+
+No elimines las conexiones existentes de los dispositivos finales.
+
+**Importante:** los enlaces redundantes forman un bucle de capa 2. STP debe intervenir para evitar que todos los enlaces reenvíen tráfico simultáneamente.
+
+#### Paso 3. Consultar el estado inicial de STP
+Accede a la CLI de cada switch y ejecuta:
+
+```text
+enable
+show spanning-tree
+```
+
+Si el comando no muestra la información esperada, prueba:
+
+```text
+show spanning-tree vlan 1
+```
+
+Registra los resultados de los tres switches.
+
+| Switch | ¿Es el Root Bridge? | Root ID | Root Port | Puertos en forwarding | Puertos bloqueados |
+|---|:---:|---|---|---|---|
+| SW-01 | | | | | |
+| SW-02 | | | | | |
+| SW-03 | | | | | |
+
+La elección del switch raíz depende del **Bridge ID**, formado por la prioridad y la dirección MAC del switch. Si todos tienen la misma prioridad, normalmente gana el que tenga la dirección MAC más baja.
+
+#### Paso 4. Identificar el switch raíz
+En cada switch, ejecuta:
+
+```text
+show spanning-tree
+```
+
+Busca la información del `Root ID` y del `Bridge ID`. Responde:
+1. ¿Qué switch ha sido elegido Root Bridge?
+2. ¿Qué información permite identificarlo?
+3. ¿Coincide el Root ID de los switches no raíz con el Bridge ID del switch raíz?
+4. ¿Qué función desempeña el Root Bridge en STP?
+
+Realiza una captura de pantalla de la salida de comandos que justifique tu respuesta.
+
+#### Paso 5. Identificar los roles y estados de los puertos
+En cada switch, vuelve a ejecutar:
+
+```text
+show spanning-tree vlan 1
+```
+
+Identifica los roles y estados de los puertos. Recuerda:
+
+- **Root Port:** mejor camino de un switch no raíz hacia el Root Bridge.
+- **Designated Port:** puerto seleccionado para reenviar tráfico en un segmento.
+- **Forwarding:** el puerto puede reenviar tramas.
+- **Blocking/Alternate:** puerto que no reenvía tráfico de usuario porque STP evita el bucle.
+
+Completa la tabla:
+
+| Switch | Puerto | Conectado a | Rol STP | Estado STP |
+|---|---|---|---|---|
+| SW-01 | | | | |
+| SW-01 | | | | |
+| SW-02 | | | | |
+| SW-02 | | | | |
+| SW-03 | | | | |
+| SW-03 | | | | |
+
+Los nombres de los puertos y los estados exactos pueden variar según la elección del Root Bridge y la convergencia de STP.
+
+#### Paso 6. Comprobar que STP evita el bucle
+Abre el modo **Simulation** de Packet Tracer.
+1. Genera tráfico entre dos dispositivos finales.
+2. Observa cómo circulan las tramas por la red.
+3. Comprueba que STP mantiene uno de los caminos redundantes sin reenviar tráfico de usuario.
+4. Vuelve a la CLI y consulta el estado de los puertos mediante `show spanning-tree vlan 1`.
+
+Responde:
+1. ¿Por qué no deben reenviar tráfico todos los enlaces del triángulo al mismo tiempo?
+2. ¿Qué problema podría producirse si STP no evitara el bucle?
+3. ¿Cómo contribuye el puerto bloqueado o alternativo a prevenir ese problema?
+
+Guarda una captura del modo Simulation y otra de la salida de STP.
+
+#### Paso 7. Comprobar la recuperación ante un fallo
+Con STP funcionando correctamente:
+1. Identifica un enlace que forme parte del camino activo entre los switches.
+2. Desconecta temporalmente ese enlace en Packet Tracer.
+3. Espera a que STP recalcule la topología.
+4. Consulta de nuevo `show spanning-tree vlan 1` en los switches afectados.
+5. Comprueba si un enlace que estaba bloqueado pasa a reenviar tráfico.
+6. Realiza un `ping` entre dos dispositivos finales para verificar si se recupera la comunicación.
+
+Después, vuelve a conectar el enlace desconectado y espera a que STP converja.
+
+**Importante:** durante la convergencia puede haber una interrupción temporal de la conectividad. No modifiques las prioridades de los switches ni fuerces la elección del Root Bridge; eso corresponde al criterio j).
+
+#### Paso 8. Informe final
+Elabora un breve informe que incluya:
+- Topología inicial y ampliada.
+- Switch elegido como Root Bridge.
+- Tabla con los roles y estados de los puertos.
+- Evidencias de los comandos `show spanning-tree`.
+- Explicación de cómo STP evita el bucle.
+- Resultado de la prueba de desconexión y recuperación del enlace.
+
+#### Paso 9. Entrega
+La entrega será individual, en formato PDF y se realizará a través de Aules. El documento debe contener todas las capturas de pantalla necesarias para demostrar que se ha realizado el procedimiento correctamente. Recordad incluir:
+- Archivo `.pkt` con la topología de tres switches.
+- Tabla de roles y estados STP.
+- Capturas de las comprobaciones.
+- Informe final.

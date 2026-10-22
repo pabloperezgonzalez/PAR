@@ -463,3 +463,155 @@ Podemos resumir una actualización de la siguiente forma:
 ```
 
 ### 24. Actividad UP3.7. Actualización del sistema operativo del conmutador - CE3.g)
+Partiendo de la red configurada en la actividad del criterio CE3.f), utiliza Cisco Packet Tracer para consultar la versión del sistema operativo de un switch, localizar una imagen IOS compatible en un servidor TFTP y realizar el procedimiento de actualización, comprobando posteriormente la versión instalada.
+
+#### Paso 1. Recuperar el escenario anterior
+Abre el archivo de la actividad anterior finalizada. Debes conservar:
+
+- `SW-01` y `SW-02`.
+- `PC01-NombreApellido` y `PC02-NombreApellido`.
+- `LAP01-NombreApellido` y `LAP02-NombreApellido`.
+- Las conexiones y direcciones IP anteriores.
+- La configuración de seguridad de puertos realizada en `SW-01`.
+
+No elimines ni reconstruyas la topología. Durante esta actividad añadirás temporalmente un servidor TFTP para transferir la imagen del sistema operativo.
+
+#### Paso 2. Consultar la versión instalada
+Accede a la CLI de `SW-01` y ejecuta:
+
+```text
+enable
+show version
+```
+
+Anota la siguiente información:
+
+| Dato | Resultado |
+|---|---|
+| Modelo del switch | |
+| Versión IOS instalada | |
+| Imagen IOS utilizada | |
+| Tiempo de funcionamiento | |
+
+A continuación, consulta el contenido de la memoria flash:
+
+```text
+show flash:
+```
+
+Anota el nombre de la imagen IOS instalada y comprueba el espacio disponible que muestre el dispositivo.
+
+#### Paso 3. Añadir un servidor TFTP
+Añade un dispositivo **Server-PT** al escenario y asígnale el nombre `SRV-TFTP`. Conéctalo a un puerto Ethernet libre de `SW-01` mediante un cable de cobre directo. Configura su dirección IP desde **Desktop → IP Configuration**:
+
+| Parámetro | Valor |
+|---|---|
+| Dirección IP | `192.168.10.100` |
+| Máscara | `255.255.255.0` |
+| Puerta de enlace | No necesaria en esta práctica |
+
+Para que el switch pueda comunicarse con el servidor, configura una dirección de gestión en la interfaz VLAN 1 de `SW-01`:
+
+```text
+enable
+configure terminal
+interface vlan 1
+ip address 192.168.10.2 255.255.255.0
+no shutdown
+end
+```
+
+Comprueba que la interfaz VLAN 1 está activa:
+
+```text
+show ip interface brief
+```
+
+#### Paso 4. Preparar la imagen IOS
+Abre `SRV-TFTP` y accede a **Services → TFTP**.
+
+1. Activa el servicio TFTP.
+2. Comprueba si el servidor dispone de alguna imagen IOS compatible con el modelo de switch.
+3. Anota el nombre exacto del archivo que vas a utilizar.
+4. Comprueba que la imagen corresponde al modelo y que el switch dispone de espacio suficiente.
+
+No inventes el nombre de la imagen ni utilices un archivo de otro modelo. Si el servidor no incluye ninguna imagen compatible, consulta si tu versión de Packet Tracer permite añadir una imagen IOS de ejemplo. Si no lo permite, documenta esta limitación y realiza el procedimiento hasta la fase de preparación, sin eliminar ni sobrescribir la imagen instalada.
+
+#### Paso 5. Comprobar la comunicación con el servidor
+Desde la CLI de `SW-01`, ejecuta:
+
+```text
+ping 192.168.10.100
+```
+
+Si no recibes respuesta, revisa la dirección IP del servidor, la interfaz VLAN 1 y la conexión física. No continúes con la transferencia hasta que el switch pueda comunicarse con el servidor TFTP.
+
+#### Paso 6. Transferir la imagen IOS
+Cuando tengas disponible una imagen compatible, utiliza el comando:
+
+```text
+copy tftp: flash:
+```
+
+Sigue las preguntas que muestre la CLI:
+- Dirección IP del servidor TFTP: `192.168.10.100`.
+- Nombre del archivo de origen: el nombre exacto de la imagen disponible.
+- Nombre del archivo de destino: acepta el nombre propuesto si es correcto.
+
+Espera a que finalice la transferencia. Después, comprueba el contenido de la memoria flash:
+
+```text
+show flash:
+```
+
+Verifica que la nueva imagen aparece en el listado y que la transferencia ha finalizado correctamente.
+
+#### Paso 7. Seleccionar la imagen y reiniciar
+Si la versión simulada del switch permite seleccionar la imagen de arranque, configura la imagen nueva mediante el comando apropiado para ese modelo. En los modelos compatibles puede utilizarse una instrucción de este tipo:
+
+```text
+configure terminal
+boot system flash:/NOMBRE-IMAGEN.bin
+end
+```
+
+Sustituye `NOMBRE-IMAGEN.bin` por el nombre real del archivo y comprueba que la sintaxis es compatible con el switch utilizado. Antes de reiniciar, guarda la configuración:
+
+```text
+copy running-config startup-config
+```
+
+Si el procedimiento de actualización está disponible y has comprobado que la imagen es válida, reinicia el switch:
+
+```text
+reload
+```
+
+Confirma el reinicio cuando te lo solicite.
+
+#### Paso 8. Verificar el resultado
+Cuando el switch vuelva a estar operativo, ejecuta:
+
+```text
+show version
+show flash:
+```
+
+Completa la tabla:
+| Comprobación | Antes de la actualización | Después de la actualización |
+|---|---|---|
+| Versión IOS | | |
+| Imagen de arranque | | |
+| Imagen disponible en flash | | |
+| Switch operativo | | |
+
+Si Packet Tracer permite completar la actualización, comprueba que la nueva versión o imagen está seleccionada y que el switch vuelve a funcionar. Si la versión de Packet Tracer no permite completar el cambio de IOS, entrega las evidencias de las comprobaciones y explica en qué fase se encuentra la limitación.
+
+#### Paso 9. Entrega
+La entrega será individual, en formato PDF y se realizará a través de Aules. El documento debe contener todas las capturas de pantalla necesarias para demostrar que se ha realizado el procedimiento correctamente. Recordad incluir:
+
+- Captura de `show version` antes de la actualización.
+- Captura de `show flash:` antes y después de la transferencia.
+- Captura del servidor TFTP con el archivo disponible.
+- Captura de `show version` después del reinicio, si se ha podido completar.
+- Una explicación del procedimiento y de las dificultades encontradas.
