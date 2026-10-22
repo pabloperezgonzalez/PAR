@@ -293,9 +293,10 @@ Una vez instalado, crea una pequeña topología formada por **dos ordenadores**.
 
 ##### Paso 1. Crear la cuenta de Cisco NetAcad
 
-* Accede a [Cisco Networking Academy](https://www.netacad.com/es).
+* Accede al curso de [Introducción a Cisco Packet Tracer](https://www.netacad.com/es/courses/getting-started-cisco-packet-tracer?courseLang=es-XL&instance_id=dddc0c3b-60d3-4d85-8c66-31f45882dcfa) o si prefieres a la página principal de [Cisco Networking Academy](https://www.netacad.com/es).
 * Crea una cuenta personal.
 * Inicia sesión.
+* Realiza el curso de Introducción a Cisco Packet Tracer. 
 * Descarga e instala **Cisco Packet Tracer** (si no lo tienes instalado en tu ordenador).
 
 ##### Paso 2. Crear la topología
